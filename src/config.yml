@@ -15,7 +15,7 @@ database:
     # Enable this to use MySQL instead of "file based"
     # SQLite. For performance improvement it's recommended to
     # use MySQL. If you don't have access to a MySQL server,
-    # just let this disabled (false).
+    # just let this disabled (false).s
     enabled: false
     ip-address: 'localhost'
     port: '3306'
