@@ -1,0 +1,52 @@
+# General settings
+general:
+  # Language
+  # Pre translated:
+  # English: en-US
+  language: 'en-US'
+  worlds_list:
+    - 'world'
+
+
+# Database settings
+database:
+  # MySQL
+  mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'upgradeablehoppers'
+    user: 'minecraft'
+    password: 'password'
+
+
+command:
+  # Set aliases
+  # for /UpgradeableHoppers command
+  # NOTE: This settings
+  # requires /reload
+  aliases_list:
+    - hopper
+    - hoppers
+    - upgradehoppers
+    - uhopper
+    - uhoppers
+
+
+# Economy settings
+economy:
+  # Here you can choose which type
+  # of economy you want to use.
+  # Highest priority is at the top.
+  # If nothing could be enabled,
+  # the plugin, will use item based economy.
+  type:
+    # Enable vault economy?
+    vault: true
+    # Set the currency item for
+    # default item based economy.
+    default: 'DIAMOND'

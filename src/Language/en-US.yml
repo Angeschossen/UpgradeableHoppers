@@ -1,0 +1,51 @@
+general:
+  time:
+    seconds: 'second(s)'
+    minutes: 'minute(s)'
+    hours: 'hour(s)'
+
+
+message:
+  hopper:
+    created: '#t#&9&lHopper{newline}&7Successful created.'
+    deleted: '#t#&9&lHopper{newline}&cSuccessful deleted.'
+    link:
+      click: '&8[&9UpgradeHoppers&8] &7Click on a container or hopper to link it with this hopper.'
+      inventory: '&8[&9UpgradeHoppers&8] &cYou can''t link this block. &7It needs to be a container.'
+      origin: '&8[&9UpgradeHoppers&8] &cYou can''t link the hopper to itself. &7Please link it to a other container.'
+      already: '&8[&9UpgradeHoppers&8] &cThis block is already linked. &7To remove a link open the hopper menu.'
+      success: '#t#&9&lHopper{newline}&7Successful linked.'
+  no-access:
+    no-permission: '&8[&9UpgradeHoppers&8] &cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+    upgrade: '&8[&9UpgradeHoppers&8] &cYou''re not allowed to upgrade this hopper. &7It does belong to&b {owner}&7.'
+    open: '&8[&9UpgradeHoppers&8] &cYou''re not allowed to open this hoppers inventory. &7It does belong to&b {owner}&7.'
+    delete: '&8[&9UpgradeHoppers&8] &cYou''re not allowed to delete this hopper. &7It does belong to&b {owner}&7.'
+
+command:
+  general:
+    cmd-not-exist: '&8[&9UpgradeHoppers&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    cant-afford: '&8[&9UpgradeHoppers&8] &cYou can''t afford this. &7You need&b ${cost} &7money to pay this.'
+    player-offline: '&8[&9UpgradeHoppers&8] &cCouldn''t find this player. &7Player&b {player} &7is offline.'
+    invalid-number: '&8[&9UpgradeHoppers&8] &cYou entered a invalid number at the&e {argument} &cargument. &7Please instert a valid number there.'
+  get:
+    dropped: '&8[&9UpgradeHoppers&8] &7You received a hopper for&b ${cost}&7. &cIt dropped to the ground, because there was no space left in your inventory.'
+    success: '&8[&9UpgradeHoppers&8] &7You received a hopper item for&b ${cost}&7. It''s now in your inventory.'
+  give:
+    success-sender: '&8[&9UpgradeHoppers&8] &7You successful gave&b {items} &7hopper(s) to player&b {player}&7.'
+    success-target: '&8[&9UpgradeHoppers&8] &7You received&b {items} &7hopper(s). They were put in your inventory.'
+    dropped: '&8[&9UpgradeHoppers&8] &7You received&b {items} &7hopper(s). &cThey dropped to the gound, because there was no space left in your inventory.'
+  help:
+    page-not-exist: '&8[&9UpgradeHoppers&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
+
+
+help:
+  general:
+    prefix: '&8[&9UpgradeHoppers&8] &7Usage: '
+    header: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------'
+    page: '&7Use &8/&7Hoppers help {next} &7for the next page. <> = needed [] = optional'
+    footer: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------'
+  command:
+    help: '&8/&7Hoppers help &8[&apage&8] - &eGet help'
+    get: '&8/&7Hoppers get &8- &eGet hopper'
+    give: '&8/&7Hoppers give &8<&7player&8> [&7amount&8] - &eGive hopper(s)'
+

@@ -1,0 +1,27 @@
+name: UpgradeableHoppers
+main: me.angeschossen.upgradeablehoppers.UpgradeableHoppers
+version: 1.0.0.0
+author: Angeschossen
+api-version: 1.13
+
+
+commands:
+  upgradeablehoppers:
+    description: UpgradeableHoppers main command.
+
+permissions:
+  uhoppers.*:
+    description: Access to all UpgradeableHoppers actions
+    default: op
+    children:
+      uhoppers.hoppers.<Number>:
+        description: Give players permission to create specific amount of hoppers.
+        default: op
+      uhoppers.command.*:
+        description: Access to all commands.
+        default: op
+        children:
+          uhoppers.command.get:
+            description: Get / buy a hopper item
+          uhoppers.command.give:
+            description: Give a hopper item to a player
