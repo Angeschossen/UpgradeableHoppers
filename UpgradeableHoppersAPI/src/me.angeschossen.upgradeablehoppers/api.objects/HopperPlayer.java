@@ -1,7 +1,5 @@
 package me.angeschossen.upgradeablehoppers.api.objects;
 
-import me.angeschossen.upgradeablehoppers.database.objects.OfflineCoordinate;
-
 import java.util.Collection;
 import java.util.UUID;
 

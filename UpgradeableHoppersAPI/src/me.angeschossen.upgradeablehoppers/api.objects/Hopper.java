@@ -1,7 +1,5 @@
 package me.angeschossen.upgradeablehoppers.api.objects;
 
-import me.angeschossen.upgradeablehoppers.database.objects.Coordinate;
-import me.angeschossen.upgradeablehoppers.database.objects.LinkD;
 import org.bukkit.Location;
 import org.bukkit.inventory.Inventory;
 
@@ -34,7 +32,7 @@ public interface Hopper {
 
     boolean removeDestination(Location location);
 
-    Collection<LinkD> getDestinations();
+    Collection<Link> getDestinations();
 
     Coordinate getCoordinate();
 
