@@ -25,6 +25,8 @@ database:
 
 
 command:
+  # Should players need to confirm their purchase at /Hopper get?
+  get-confirm: true
   # Set aliases
   # for /UpgradeableHoppers command
   # NOTE: This settings
@@ -35,6 +37,20 @@ command:
     - upgradehoppers
     - uhopper
     - uhoppers
+
+
+# Hopper Settings
+hopper:
+  # Allow only the owner
+  # of the hopper item
+  # to place it down.
+  only-owner: true
+  # Item settings /Hopper get
+  item:
+    # Cost of the item,
+    # if you're taking it from
+    # /Hopper get
+    cost: 1500.0
 
 
 # Economy settings
@@ -50,3 +66,5 @@ economy:
     # Set the currency item for
     # default item based economy.
     default: 'DIAMOND'
+    # Use experience Levels as economy?
+    exp-levels: false

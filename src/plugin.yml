@@ -1,6 +1,6 @@
 name: UpgradeableHoppers
 main: me.angeschossen.upgradeablehoppers.UpgradeableHoppers
-version: 1.0.0.0
+version: 1.2.4.0
 author: Angeschossen
 api-version: 1.13
 
@@ -8,13 +8,14 @@ api-version: 1.13
 commands:
   upgradeablehoppers:
     description: UpgradeableHoppers main command.
+    aliases: [hopper, hoppers]
 
 permissions:
   uhoppers.*:
     description: Access to all UpgradeableHoppers actions
     default: op
     children:
-      uhoppers.hoppers.<Number>:
+      uhoppers.hoppers.NUMBER:
         description: Give players permission to create specific amount of hoppers.
         default: op
       uhoppers.command.*:
@@ -22,6 +23,31 @@ permissions:
         default: op
         children:
           uhoppers.command.get:
-            description: Get / buy a hopper item
+            description: Access to /UpgradeableHoppers get command
+            default: op
           uhoppers.command.give:
-            description: Give a hopper item to a player
+            description: Access to /UpgradeableHoppers give command
+            default: op
+          uhoppers.command.help:
+            description: Access to /UpgradeableHoppers help command
+            default: op
+      uhoppers.admin.command.*:
+        description: Access to all admin commands.
+        default: op
+        children:
+          uhoppers.admin.command.reload:
+            description: Access to /UpgradeableHoppers reload command
+            default: op
+      uhoppers.bypass.*:
+        description: Bypass protections etc.
+        default: op
+        children:
+          uhoppers.bypass.open:
+            description: Open other players hoppers.
+            default: op
+          uhoppers.bypass.upgrade:
+            description: Upgrade other players hoppers.
+            default: op
+          uhoppers.bypass.delete:
+            description: Delete other players hoppers.
+            default: op

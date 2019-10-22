@@ -1,12 +1,11 @@
 # Here you can edit the farm levels.
-# You can add a infinitive amount of levels.
-# Please respect the given format. Otherwise
-# it might not work.
+# You can add an infinitive amount of levels.
+# Please respect the given format. Otherwise, it might not work.
 # For any help join Discord: https://discord.gg/B4MAJVk
-#
+
+
 # Transfer amount
-# How many items should be transferred
-# at one transfer?
+# How many items should be transferred at one transfer?
 transfer-amount:
   1:
     value: 8
@@ -50,9 +49,9 @@ transfer-amount:
   14:
     value: 21
     cost: 37000.0
-# Suction radius
-# How large should be
-# the suction radius?
+
+
+# Suction radius How large should be the suction radius?
 # For example 2 x 2 x 2
 # Three-dimensional
 suction-radius:
@@ -68,13 +67,11 @@ suction-radius:
   4:
     value: 5
     cost: 2500.0
+
+
 # Links amount
-# How many links can
-# the player create
-# for one hopper?
-# A player can link his hopper to
-# other containers by open the hopper
-# menu and then clicking the link item.
+# How many links can the player create for one hopper?
+# A player can link his hopper to other containers by open the hopper menu and then clicking the link item.
 links-amount:
   1:
     value: 1
@@ -84,7 +81,23 @@ links-amount:
     cost: 5000.0
   3:
     value: 3
-    cost: 25000.0
+    cost: 8000.0
   4:
     value: 4
-    cost: 50000.0
+    cost: 1000.0
+
+
+# Max distance between a hopper and the link destination.
+link-distance:
+  1:
+    value: 100
+    cost: 0
+  2:
+    value: 125
+    cost: 5000.0
+  3:
+    value: 150
+    cost: 7500.0
+  4:
+    value: 200
+    cost: 9000.0

@@ -56,6 +56,9 @@ general:
   others: 'Others'
   max: '&cMax reached'
   destination: '&a{block}&8, &7World:&2 {world}&8, &7X:&2 {x}&8, &7Y:&2 {y}&8, &7Z:&2 {z}'
+  filter:
+    blacklist: '&8Blacklist'
+    whitelist: '&fWhitelist'
 
 misc:
   hopper-item:
@@ -71,12 +74,13 @@ misc:
       - '&8- &7Transfer amount:&a {transfer} &7items'
       - '  &7Suction radius:&a {suction}'
       - '  &7Link amount:&a {links} &7links'
+      - '  &7Link distance:&a {distance} &7blocks'
     material: 'HOPPER'
 
 gui:
   upgrade:
     title: '&8Hopper Menu'
-    size: 27
+    size: 36
     s:
       close:
         name: '&cClose'
@@ -110,6 +114,9 @@ gui:
           - '&bLEFT CLICK:'
           - '&7Link this hopper to'
           - '&7a container.'
+          - '&cSHIFT + LEFT CLICK:'
+          - '&7Unlink a container from'
+          - '&7this hopper.'
           - '&9RIGHT CLICK:'
           - '&7Upgrade links amount.'
           - ' '
@@ -136,8 +143,39 @@ gui:
           - '&7Cost:&c ${cost}'
           - ' '
           - '&7Current radius:&2 {suction_current}'
+          - ' '
+          - '&7Suction: {enabled}'
+          - ' '
+          - '&8- &7Use &9RIGHT CLICK &7to'
+          - '  &7toggle suction.'
         material: 'BEACON'
         slot: 17
+      upgrade_link-distance:
+        name: '&7> &eUpgrade Max Link Distance'
+        lore:
+          - '&7Upgrade the maximum link'
+          - '&7distance.'
+          - ' '
+          - '&7Next Level:'
+          - '&7Maximum distance:&a {distance_next}'
+          - '&7Level:&a {next_level}'
+          - '&7Cost:&c ${cost}'
+          - ' '
+          - '&7Current maximum distance:&2 {distance_current}'
+        material: 'COMPASS'
+        slot: 24
+      filter:
+        name: '&7> &eItem Filter'
+        lore:
+          - '&7Edit the filter for'
+          - '&7this hopper.'
+          - ' '
+          - '&7Mode: {mode}'
+          - ' '
+          - '&8- &7Use &9RIGHT CLICK &7to'
+          - '  &7toggle the filter mode. '
+        material: 'OBSERVER'
+        slot: 22
     a:
       failure_max:
         name: '&4Max Level reached'
@@ -162,7 +200,7 @@ gui:
       placeholder_1:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 1
-        to: 27
+        to: 36
 
   action-confirm:
     title: '&8Confirm Action'
@@ -207,3 +245,52 @@ gui:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 19
         to: 27
+  filter:
+    title: '&7Filter Mode: {mode}'
+    size: 36
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '&e{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 30
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 34
+    l:
+      item:
+        name: '&b{item}'
+        lore:
+          - '&7Click on this item'
+          - '&7to remove it from'
+          - '&7the list.'
+          - ' '
+          - '&8- &7You can view the list'
+          - '  &7mode in this menu title.'
+        material: 'PAPER'
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 27
+        to: 36
