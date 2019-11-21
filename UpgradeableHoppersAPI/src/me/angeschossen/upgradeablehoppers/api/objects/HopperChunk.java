@@ -3,11 +3,11 @@ package me.angeschossen.upgradeablehoppers.api.objects;
 public interface HopperChunk {
     boolean isHopper(int x, int y, int z);
 
-    void load();
+    boolean isLoaded();
 
-    void save();
+    boolean isChunkLoaded();
 
-    void unload();
+    boolean isBusy();
 
     Hopper getHopper(int x, int y, int z);
 

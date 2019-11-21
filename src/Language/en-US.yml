@@ -16,7 +16,7 @@ message:
       origin: '&cYou can''t link the hopper to itself. &7Please link it to a other container.'
       world: '&cYou can''t create links from one world to a other one. &7The link needs to be in the same world than the hopper.'
       max-distance: '&cThis destination is too far away. &7The maximum distance for this hopper is&b {distance}&7. You can upgrade it in the menu of the hopper.'
-      already: '["",{"text":"&cThis block is already linked. "},{"text":"&7To remove a link open the hopper menu.","hoverEvent":{"action":"show_text","value":"&aTo open the hopper menu, just simply left click it."}}]'
+      already: '&cThis container is already linked. &7To view linked containers, open the hopper menu.'
       success: '#t#&9&lHopper{newline}&7Successful linked.'
     unlink:
       click: '&7Click on a container or hopper to unlink it from this hopper.'
@@ -28,6 +28,9 @@ message:
     upgrade: '&cYou''re not allowed to upgrade this hopper. &7It does belong to&b {owner}&7.'
     open: '&cYou''re not allowed to open this hoppers inventory. &7It does belong to&b {owner}&7.'
     delete: '&cYou''re not allowed to delete this hopper. &7It does belong to&b {owner}&7.'
+    vanilla:
+      craft: '&cYou''re not allowed to craft normal hoppers. &7An administrator disabled that. &7Use &8/&aHopper get &7to buy a hopper. Bypass permission: uhoppers.bypass.vanilla.craft'
+      place: '&cYou''re not allowed to place normal hoppers. &7An administrator disabled that. &7Use &8/&aHopper get &7to buy a hopper. Bypass permission: uhoppers.bypass.vanilla.place'
   creation:
     world: '&cYou''re not allowed to create upgradeable hoppers in this world. &7A administrator needs to add world&b {world} &7to config: worlds_list'
     owner: '&cYou can''t place this hopper. &7It belongs to player&b {owner}&7. This option can be disabled in config:&5 only-owner'
@@ -52,11 +55,11 @@ command:
 
 
 help:
-  prefix: '&7Usage: '
   general:
-    header: '{"text":"&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------","hoverEvent":{"action":"show_text","value":"&a<> = Needed argument [] = Optimal argument"}}'
+    prefix: '&7Usage: '
+    header: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------&a'
     page: '&7Use &8/&7Hoppers help {next} &7for the next page. <> = needed [] = optional'
-    footer: '{"text":"&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------","hoverEvent":{"action":"show_text","value":"&a<> = Needed argument [] = Optimal argument"}}'
+    footer: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------&a'
   command:
     help: '&8/&aHoppers help &8[&apage&8] - &7Get help'
     get: '&8/&aHoppers get &8- &7Get hopper'

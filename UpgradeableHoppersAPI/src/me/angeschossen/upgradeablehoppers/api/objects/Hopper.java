@@ -1,14 +1,44 @@
 package me.angeschossen.upgradeablehoppers.api.objects;
 
+import me.angeschossen.upgradeablehoppers.api.enums.Status;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nullable;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.UUID;
 
 public interface Hopper {
 
+    int getFreeSpace();
+
+    int getMaxLinkDistance();
+
+    boolean hasLinks();
+
+    Collection<Material> getFilter();
+
+    boolean addFilterItem(Material material);
+
+    boolean removeFilterItem(Material material);
+
+    boolean toggleFilterMode();
+
+    Inventory getUpperContainer();
+
+    boolean toggleSuction();
+
+    boolean canTransfer(Material material);
+
+    Inventory getInventory();
+
     boolean canAction(UUID playerUUID, HopperAction action);
+
+    boolean canAction(Player player, HopperAction action);
 
     void enableAction(HopperRole role, HopperAction action);
 
@@ -26,23 +56,33 @@ public interface Hopper {
 
     void setLinksAmount(int maxlinks);
 
+    void setMaxLinkDistance(int maxLinkDistance);
+
     void setSuctionRadius(int radius);
 
-    void addDestination(Inventory destination);
+    boolean addDestination(Inventory destination, Player player);
 
-    boolean removeDestination(Location location);
+    boolean removeDestination(String worldName, int x, int y, int z);
 
-    Collection<Link> getDestinations();
+    @Nullable
+    HashMap<Integer, ItemStack> addItem(ItemStack itemStack);
+
+    Status getStatus();
+
+    @Nullable
+    HashMap<Integer, ItemStack> removeItem(ItemStack itemStack);
 
     Coordinate getCoordinate();
 
     Location getLocation();
 
-    boolean load();
+    Link getVanillaLink();
 
-    void delete();
+    boolean isBusy();
 
-    void unload();
+    boolean isChunkLoaded();
+
+    boolean isLoaded();
 
     int getID();
 

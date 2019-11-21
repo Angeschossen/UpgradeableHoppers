@@ -60,7 +60,7 @@ general:
     blacklist: '&8Blacklist'
     whitelist: '&fWhitelist'
 
-misc:
+physical-Item:
   hopper-item:
     name: '&aHopper Item'
     lore:

@@ -52,6 +52,12 @@ hopper:
     # /Hopper get
     cost: 1500.0
 
+  # Restrict normal hoppers, which are no upgradeable hoppers.
+  vanilla:
+    # Allow the crafting of normal hoppers?
+    crafting: true
+    # Allow the placing of normal hoppers?
+    placing: true
 
 # Economy settings
 economy:

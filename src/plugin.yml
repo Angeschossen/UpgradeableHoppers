@@ -1,6 +1,6 @@
 name: UpgradeableHoppers
 main: me.angeschossen.upgradeablehoppers.UpgradeableHoppers
-version: 1.2.4.0
+version: 1.2.5.3
 author: Angeschossen
 api-version: 1.13
 
@@ -51,3 +51,13 @@ permissions:
           uhoppers.bypass.delete:
             description: Delete other players hoppers.
             default: op
+          uhoppers.bypass.vanilla:
+            description: Bypass vanilla hopper settings.
+            default: op
+            children:
+              uhoppers.bypass.vanilla.craft:
+                description: Bypass vanilla hopper craft setting.
+                default: op
+              uhoppers.bypass.vanilla.place:
+                description: Bypass vanilla hopper place setting.
+                default: op
