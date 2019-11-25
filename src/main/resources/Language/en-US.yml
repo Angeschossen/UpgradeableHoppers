@@ -1,0 +1,70 @@
+general:
+  prefix: '&8[&9UpgradeHoppers&8] '
+  time:
+    seconds: 'second(s)'
+    minutes: 'minute(s)'
+    hours: 'hour(s)'
+
+
+message:
+  hopper:
+    created: '#t#&9&lHopper{newline}&7Successful created.'
+    deleted: '#t#&9&lHopper{newline}&cSuccessful deleted.'
+    link:
+      click: '&7Click on a container or hopper to link it with this hopper.'
+      inventory: '&cYou can''t link this block. &7It needs to be a container.'
+      origin: '&cYou can''t link the hopper to itself. &7Please link it to a other container.'
+      world: '&cYou can''t create links from one world to a other one. &7The link needs to be in the same world than the hopper.'
+      max-distance: '&cThis destination is too far away. &7The maximum distance for this hopper is&b {distance}&7. You can upgrade it in the menu of the hopper.'
+      already: '&cThis container is already linked. &7To view linked containers, open the hopper menu.'
+      success: '#t#&9&lHopper{newline}&7Successful linked.'
+    unlink:
+      click: '&7Click on a container or hopper to unlink it from this hopper.'
+      not-linked: '&cThis container isn''t linked to the hopper. &7Nothing changed.'
+      success: '#t#&9&lContainer{newline}&7Successful unlinked.'
+
+  no-access:
+    no-permission: '&cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+    upgrade: '&cYou''re not allowed to upgrade this hopper. &7It does belong to&b {owner}&7.'
+    open: '&cYou''re not allowed to open this hoppers inventory. &7It does belong to&b {owner}&7.'
+    delete: '&cYou''re not allowed to delete this hopper. &7It does belong to&b {owner}&7.'
+    vanilla:
+      craft: '&cYou''re not allowed to craft normal hoppers. &7An administrator disabled that. &7Use &8/&aHopper get &7to buy a hopper. Bypass permission: uhoppers.bypass.vanilla.craft'
+      place: '&cYou''re not allowed to place normal hoppers. &7An administrator disabled that. &7Use &8/&aHopper get &7to buy a hopper. Bypass permission: uhoppers.bypass.vanilla.place'
+  creation:
+    world: '&cYou''re not allowed to create upgradeable hoppers in this world. &7A administrator needs to add world&b {world} &7to config: worlds_list'
+    owner: '&cYou can''t place this hopper. &7It belongs to player&b {owner}&7. This option can be disabled in config:&5 only-owner'
+    max: '&cYou can''t create any more upgradeable hoppers. &7Your maximum is&b {max}&7. Permission:&5 uhoppers.hoppers.NUMBER'
+
+command:
+  general:
+    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    cant-afford: '&cYou can''t afford this. &7You need&b ${cost} &7money to pay this.'
+    player-offline: '&cCouldn''t find this player. &7Player&b {player} &7is offline.'
+    invalid-number: '&cYou entered a invalid number at the&e {argument} &cargument. &7Please instert a valid number there.'
+  get:
+    confirm: '&cPlease confirm this purchase &8(&7/&aHoppers get confirm&8)&c. &7Buying this hopper item will cost you&c ${costs}&7.'
+    dropped: '&7You received a hopper for&b ${cost}&7. &cIt dropped to the ground, because there was no space left in your inventory.'
+    success: '&7You received a hopper item for&b ${cost}&7. It''s now in your inventory.'
+  give:
+    success-sender: '&7You successful gave&b {items} &7hopper(s) to player&b {player}&7.'
+    success-target: '&7You received&b {items} &7hopper(s). They were put in your inventory.'
+    dropped: '&7You received&b {items} &7hopper(s). &cThey dropped to the gound, because there was no space left in your inventory.'
+  help:
+    page-not-exist: '&cThe page&e {page} &cdoesn''t exist. &7Typo?'
+
+
+help:
+  general:
+    prefix: '&7Usage: '
+    header: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------&a'
+    page: '&7Use &8/&7Hoppers help {next} &7for the next page. <> = needed [] = optional'
+    footer: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------&a'
+  command:
+    help: '&8/&aHoppers help &8[&apage&8] - &7Get help'
+    get: '&8/&aHoppers get &8- &7Get hopper'
+    give: '&8/&aHoppers give &8<&7player&8> [&7amount&8] - &7Give hopper(s)'
+
+    admin:
+      reload: '&8/&aHoppers reload &8- &7Reload configurations'
+
