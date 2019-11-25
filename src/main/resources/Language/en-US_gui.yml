@@ -274,7 +274,7 @@ gui:
         slot: 34
     l:
       object:
-        name: '&bs{item}'
+        name: '&b{item}'
         lore:
           - '&7Click on this item'
           - '&7to remove it from'
