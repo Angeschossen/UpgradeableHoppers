@@ -11,6 +11,8 @@ import java.util.HashMap;
 public interface Link {
     boolean isBusy();
 
+    boolean exists();
+
     @Nullable
     HashMap<Integer, ItemStack> addItem(ItemStack itemStack) throws NullPointerException;
 

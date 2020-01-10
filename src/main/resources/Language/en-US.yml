@@ -17,6 +17,7 @@ message:
       world: '&cYou can''t create links from one world to a other one. &7The link needs to be in the same world than the hopper.'
       max-distance: '&cThis destination is too far away. &7The maximum distance for this hopper is&b {distance}&7. You can upgrade it in the menu of the hopper.'
       already: '&cThis container is already linked. &7To view linked containers, open the hopper menu.'
+      max: '&cYou can''t link any more containers to this hopper. &7You reached the maximum of&b {max} &7links. &7You can upgrade the amount in the hoppers menu.'
       success: '#t#&9&lHopper{newline}&7Successful linked.'
     unlink:
       click: '&7Click on a container or hopper to unlink it from this hopper.'

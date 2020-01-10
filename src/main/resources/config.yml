@@ -59,6 +59,14 @@ hopper:
     # Allow the placing of normal hoppers?
     placing: true
 
+  # Set the hopper transfer tick time (20 ticks are one second)
+  # It's not recommended to set this lower than 20.
+  transfer-ticks: 60
+
+  # Set the default hopper settings
+  default-settings:
+    - SUCTION_ENABLED
+
 # Economy settings
 economy:
   # Here you can choose which type

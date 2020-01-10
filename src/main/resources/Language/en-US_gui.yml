@@ -78,7 +78,7 @@ physical-Item:
     material: 'HOPPER'
 
 gui:
-  upgrade:
+  hopper_main:
     title: '&8Hopper Menu'
     size: 36
     s:
@@ -92,9 +92,24 @@ gui:
           - '  &7the hopper item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
+      upgrades:
+        name: '&6Upgrades'
+        lore:
+          - '&7In this row you can'
+          - '&7upgrade your hopper.'
+        material: 'ENCHANTED_GOLDEN_APPLE'
+        slot: 11
+      configurations:
+        name: '&6Configurations'
+        lore:
+          - '&7In this row you can'
+          - '&7link containers and'
+          - '&7configure your hopper.'
+        material: 'COMMAND_BLOCK'
+        slot: 20
     f:
       upgrade_transfer-amount:
-        name: '&7> &eUpgrade Transfer Amount'
+        name: '&8> &6Upgrade Transfer Amount'
         lore:
           - '&7Upgrade the transfer'
           - '&7amount.'
@@ -106,18 +121,10 @@ gui:
           - ' '
           - '&7Current amount:&2 {transfer_current}'
         material: 'HOPPER'
-        slot: 11
-      links:
-        name: '&7> &eLink to Container'
+        slot: 13
+      links-amount:
+        name: '&8> &6Links Amount'
         lore:
-          - ' '
-          - '&bLEFT CLICK:'
-          - '&7Link this hopper to'
-          - '&7a container.'
-          - '&cSHIFT + LEFT CLICK:'
-          - '&7Unlink a container from'
-          - '&7this hopper.'
-          - '&9RIGHT CLICK:'
           - '&7Upgrade links amount.'
           - ' '
           - '&7Next Level:'
@@ -126,13 +133,10 @@ gui:
           - '&7Cost:&c ${cost}'
           - ' '
           - '&7Current amount:&2 {links_current}'
-          - ' '
-          - '&7Current links:'
-          - '{destinations}'
         material: 'CHEST'
         slot: 14
       upgrade_suction-radius:
-        name: '&7> &eUpgrade Suction Radius'
+        name: '&8> &6Upgrade Suction Radius'
         lore:
           - '&7Upgrade the suction'
           - '&7radius.'
@@ -143,15 +147,10 @@ gui:
           - '&7Cost:&c ${cost}'
           - ' '
           - '&7Current radius:&2 {suction_current}'
-          - ' '
-          - '&7Suction: {enabled}'
-          - ' '
-          - '&8- &7Use &9RIGHT CLICK &7to'
-          - '  &7toggle suction.'
         material: 'BEACON'
-        slot: 17
+        slot: 15
       upgrade_link-distance:
-        name: '&7> &eUpgrade Max Link Distance'
+        name: '&8> &6Upgrade Max Link Distance'
         lore:
           - '&7Upgrade the maximum link'
           - '&7distance.'
@@ -163,9 +162,9 @@ gui:
           - ' '
           - '&7Current maximum distance:&2 {distance_current}'
         material: 'COMPASS'
-        slot: 24
+        slot: 16
       filter:
-        name: '&7> &eItem Filter'
+        name: '&8> &6Item Filter'
         lore:
           - '&7Edit the filter for'
           - '&7this hopper.'
@@ -176,6 +175,40 @@ gui:
           - '  &7toggle the filter mode. '
         material: 'OBSERVER'
         slot: 22
+      links:
+        name: '&8> &6Link to Container'
+        lore:
+          - '&bLEFT CLICK:'
+          - '&7Link this hopper to'
+          - '&7a container.'
+          - '&9RIGHT CLICK:'
+          - '&7Unlink a container from'
+          - '&7this hopper.'
+          - ' '
+          - '&7Current links:'
+          - '{destinations}'
+        material: 'CHEST'
+        slot: 23
+      toggle-suction:
+        name: '&8> &6Toggle Suction'
+        lore:
+          - '&7Click here to toggle'
+          - '&7suction.'
+          - ' '
+          - '&7Suction: {enabled}'
+        material: 'BEACON'
+        slot: 24
+      filter-delete:
+        name: '&8> &6Delete Items'
+        lore:
+          - '&4&lWARNING: &cIf enabled,'
+          - '&cthe hopper will delete'
+          - '&call items, which aren''t'
+          - '&cpassing your configured filter.'
+          - ' '
+          - '&7Filter delete: {enabled}'
+        material: 'REDSTONE_BLOCK'
+        slot: 25
     a:
       failure_max:
         name: '&4Max Level reached'
@@ -201,6 +234,14 @@ gui:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 1
         to: 36
+      placeholder_2:
+        material: 'BLUE_STAINED_GLASS_PANE'
+        from: 12
+        to: 12
+      placeholder_3:
+        material: 'BLUE_STAINED_GLASS_PANE'
+        from: 21
+        to: 21
 
   action-confirm:
     title: '&8Confirm Action'

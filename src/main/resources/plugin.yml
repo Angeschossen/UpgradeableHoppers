@@ -8,7 +8,7 @@ api-version: 1.13
 commands:
   upgradeablehoppers:
     description: UpgradeableHoppers main command.
-    aliases: [hopper, hoppers]
+    aliases: [hopper, hoppers, uh]
 
 permissions:
   uhoppers.*:
@@ -17,6 +17,9 @@ permissions:
     children:
       uhoppers.hoppers.NUMBER:
         description: Give players permission to create specific amount of hoppers.
+        default: op
+      uhoppers.links.NUMBER:
+        description: Give players permission to link specific amount of containers per hopper.
         default: op
       uhoppers.command.*:
         description: Access to all commands.
