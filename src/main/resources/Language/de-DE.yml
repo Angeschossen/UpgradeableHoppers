@@ -1,0 +1,104 @@
+# Here you can edit all chat messages
+# GUI strings can be found in <language>_gui.yml
+# If you encounter any issues, contact lands support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+# 
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+# 
+# For example we want to print the prefix as a title:
+# Set general.noPerm to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
+# This would just print it as a title.
+# 
+# You also can set in, stay and out fade timings in seconds:
+# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would display this message as a title with
+# a fade in delay of 1 seconds, a stay time with 2 seconds
+# and a fade out delay of 3 seconds.
+# 
+# You also can display it as a actionbar message:
+# Just add "#a#" in front of it.
+# If you want to display it in chat, just don't set any
+# of these in front of it or use "#c#".
+# 
+# Also you can combine these modes:
+# Set for example general.prefix to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
+# stay time (2 seconds) and fade out delay (3 seconds)
+# For any questions or issues, please contact us on discord or via pm.
+# --------------------------
+
+
+general:
+  prefix: '&8[&9UpgradeTrichter&8] '
+  time:
+    seconds: Sekunde(n)
+    minutes: Minute(n)
+    hours: Stunde(n)
+message:
+  hopper:
+    created: '#t#&9&lTrichter{newline}&7Erfolgreich gesetzt.'
+    deleted: '#t#&9&lTrichter{newline}&cErfolgreich abgebaut.'
+    link:
+      click: '&7Drück auf einen Behälter oder einen Trichter um ihn mit diesem Trichter zu verbinden.'
+      inventory: '&cDu kannst diesen Block nicht verbinden. &7Es muss ein Behälter sein.'
+      origin: '&cDu kannst den Trichter nicht mit sich selbst verbinden. &7Bitte verbinde ihn mit einem Behälter.'
+      world: '&cDu kannst keine Trichter über verschiedene Welten verbinden. &7Die Verbindung muss auf der selben Welten sein wie der Trichter.'
+      max-distance: '&cDas Ziel ist zuzweit weg. &7Die maximale Distanz ist &b{distance}. &7Du kannst den Trichter im Menü upgraden.'
+      already: '&cDieser Behälter ist bereits verbunden. &7Um die Verbindung zu sehen , öffne das Trichter Menü.'
+      max: '&cDu kannst nicht noch mehr Behälter mit dem Trichter verbinden. &7Es können nur&b {max} &7verbungen für diesen Trichter existieren. &7Du kannst den Trichter im Menü upgraden.'
+      success: '#t#&9&lTrichter{newline}&7Erfolgreich verbunden.'
+    unlink:
+      click: '&7Drück auf deinen Behälter oder einen Trichter um die Verbindung zu trennen.'
+      not-linked: '&cDieser Behälter ist nicht mit dem Trichter verbunden. &7Nichts hat sich geändert.'
+      success: '#t#&9&lBehälter{newline}&7Erfolgreich getrennt.'
+  no-access:
+    no-permission: '&cDu hast nicht die benötigte Berechtigung um das zu tun. &7Du brauchst:&b
+      {permission}&7.'
+    upgrade: '&cDir ist es nicht erlaubt den Trichter upzugraden. &7Er gehört &b{owner}&7.'
+    open: '&cDir ist es nicht erlaubt den Trichter zu öffnen. &7Er gehört &b{owner}&7.'
+    delete: '&cDir ist es nicht erlaubt den Trichter abzubauen. &7Er gehört zu &b{owner}&7.'
+    vanilla:
+      craft: '&cDir ist es nicht erlaubt normale Trichter zu bauen. &7Ein Administrator hat dies dekativiert. &7Nutz &8/&ahopper get &7um ein Trichter zu kaufen. Bypass Berechtigung: uhoppers.bypass.vanilla.craft'
+      place: '&cDir ist es nicht erlaubt normale Trichter zu platzieren. You''re not allowed to place normal hoppers. &7Ein Administrator hat dies dekativiert. &7Nutz &8/&ahopper get &7um ein Trichter zu kaufen. Bypass Berechtigung: uhoppers.bypass.vanilla.place'
+  creation:
+    world: '&cIn dieser Welt sind die Upgradeable Trichter nicht aktiviert.&7 Ein Administrator muss die Welt&b {world} &7erst in der Config zu "worlds_list" hinzufügen'
+    owner: '&cDu darfst diesen Trichter nicht platzieren. &7Er gehört zu &b {owner}. &7Dies kanns in der Config deaktiviert werden:&5 only-owner &7.'
+    max: '&cDu kannst nicht noch mehr Upgradeable Trichter aufstellen. &7Die Grenze liegt bei&b {max}&7.
+      Berechtigung:&5 uhoppers.hoppers.NUMBER'
+command:
+  general:
+    cmd-not-exist: '&cDieser Befehl existiert nicht.'
+    cant-afford: '&cDas kannst du dir nicht leisten. &7Du brauchst&b ${cost} &7.'
+    player-offline: '&cDer Spieler wurde nicht gefunden. &b{player} &7ist offline.'
+    invalid-number: '&e argument} &cist keine gültige Zahl. &7Bitte gib eine gültige Zahl ein.'
+  get:
+    confirm: '&cBitte bestätige den Kauf mit &8(&7/&aHoppers get confirm&8)&c. &7Der Trichter kostet&c ${costs}&7.'
+    dropped: '&7Du hast den Trichter für&b ${cost}&7 erhalten. &cEr wurde auf den Boden fallen gelassen, weil du nicht genug Platz im Inventar hast.'
+    success: '&7Du hast den Trichter für&b ${cost}&7 erhalten. Er befindet sich jetzt in deinem Inventar.'
+  give:
+    success-sender: '&7Du hast {player} erfolgreich &b {items} &7Trichter gegeben.'
+    success-target: '&7Du hast&b {items} &7Trichter erhalten. Sie wurden dir ins Inventar gelegt.'
+    dropped: '&7Du hast&b {items} &7Trichter erhalten. &cSie wurde auf den Boden fallen gelassen, weil du nicht genug Platz im Inventar hast.'
+  help:
+    page-not-exist: '&cDie Seite&e {page} &cexistiert nicht. &7Tippfehler?'
+help:
+  general:
+    prefix: '&7Verwendung: '
+    header: '&7-------<- &9UpgradeHoppers Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+    page: '&7Use &8/&7Hoppers help {next} &7für die nächste Seite. <> = gebraucht [] = optional'
+    footer: '&7-------<- &9UpgradeHoppers Help &7Page&6 {page} &8/&e {pages} &7->-------&a'
+  command:
+    help: '&8/&aHoppers help &8[&aSeite&8] - &7Hilfe seite'
+    get: '&8/&aHoppers get &8- &7Erhalte ein Trichter'
+    give: '&8/&aHoppers give &8<&7Spieler&8> [&7Anzahl&8] - &7Gibt dem Spieler einen oder mehrere Trichter'
+    admin:
+      reload: '&8/&aHoppers reload &8- &7Läd die Config von UpgradeableHoppers neu'

@@ -1,0 +1,361 @@
+# Resource page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+# 
+# 
+# Here you can edit the whole GUI.
+# You can set GUI titles, the size and
+# item names, lores, materials and slots.
+# Don't remove any values or keys.
+# 
+# You also can add new items to your GUI.
+# This can be done under gui.<GUI>.s.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     title: '&8Your Lands'
+#     size: 27
+#     s:
+#       close:
+#         name: '&cClose'
+#         lore:
+#         - '&7Close this menu.'
+#         - ' '
+#         - '&8- &7You can open it again'
+#         - '  &7with &8/&3Lands menu&7.'
+#         material: 'RED_STAINED_GLASS_PANE'
+#         slot: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# 
+# 
+# You also can apply new placeholders.
+# This can be done under gui.<GUI>.p.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     p:
+#       placeholder_1:
+#       material: 'GRAY_STAINED_GLASS_PANE'
+#       from: 1
+#       to: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# Added enabled: false to a item to disable it.
+# You can set every item as a custom head:
+# Visit /https://minecraft-heads.com/custom-heads
+# Then copy the 'value:' and paste it at 'material:'
+# 
+# 
+# If you encounter any issues or you simply have
+# some questions, contact me via PM or Discord.
+# Discord: https://discord.gg/B4MAJVk
+
+
+general:
+  wYes: '&aJa'
+  wNo: '&cNein'
+  none: '&cNichts'
+  now: '&aJetzt'
+  enabled: '&aAktiviert'
+  disabled: '&cDeaktiviert'
+  others: Andere
+  max: '&cMaximum erreicht'
+  destination: '&a{block}&8, &7Welt:&2 {world}&8, &7X:&2 {x}&8, &7Y:&2 {y}&8, &7Z:&2
+    {z}'
+  filter:
+    blacklist: '&8Blacklist'
+    whitelist: '&fWhitelist'
+physical-Item:
+  hopper-item:
+    name: '&aTrichter Item'
+    lore:
+    - '&7Mit diesem Item'
+    - '&7erstellt du einen'
+    - '&7besseren Trichter'
+    - '&7wenn du ihn setzt.'
+    - ' '
+    - '&8- &7Besitzer:&2 {owner}'
+    - ' '
+    - '&8- &7Übertragungsanzahl:&a {transfer}'
+    - '  &7Einsaug Radius:&a {suction}'
+    - '  &7Verbindungsmöglichkeiten:&a {links}'
+    - '  &7Verbindungslänge:&a {distance} &7Blöcke'
+    material: HOPPER
+gui:
+  hopper_main:
+    title: '&8Trichter Menu'
+    size: 36
+    s:
+      close:
+        name: '&cSchließen'
+        lore:
+        - '&7Schließt das Menü.'
+        - ' '
+        - '&8- &7Du kannst das Menü'
+        - '  &7wieder öffnen, wenn du'
+        - '  &7Rechtsklick auf den '
+        - '  &7Trichter machst.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+      upgrades:
+        name: '&6Verbesserungen'
+        lore:
+        - '&7IIn dieser Reihe siehst'
+        - '&7du alle Verbesseungen.'
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 11
+      configurations:
+        name: '&6Konfiguration'
+        lore:
+        - '&7In dieser Reihe siehst'
+        - '&7du alle Konfigurationsmöglichkeiten'
+        - '&7des Trichters.'
+        material: COMMAND_BLOCK
+        slot: 20
+    f:
+      upgrade_transfer-amount:
+        name: '&8> &6Übertragungsanzahl verbessern'
+        lore:
+        - '&7Verbessert die Übertragungsanzahl.'
+        - ' '
+        - '&7Nächstes Level:'
+        - '&7Anzahl:&a {transfer_next}'
+        - '&7Level:&a {next_level}'
+        - '&7Kosten:&c ${cost}'
+        - ' '
+        - '&7Übertragungsanzahl zurzeit:&2 {transfer_current}'
+        material: HOPPER
+        slot: 13
+      links-amount:
+        name: '&8> &6Verbindungsmöglichkeiten verbessern'
+        lore:
+        - '&7Verbessert die Verbindungsmöglichkeiten.'
+        - ' '
+        - '&7Nächstes Level:'
+        - '&7Anzahl:&a {links_next}'
+        - '&7Level:&a {next_level}'
+        - '&7Kosten:&c ${cost}'
+        - ' '
+        - '&7Verbindungsmöglichkeiten:&2 {links_current}'
+        material: CHEST
+        slot: 14
+      upgrade_suction-radius:
+        name: '&8> &6Einsaugradius verbessern'
+        lore:
+        - '&7Verbessert den Einsaugradius.'
+        - ' '
+        - '&7Nächstes Level:'
+        - '&7Radius:&a {suction_next}'
+        - '&7Level:&a {next_level}'
+        - '&7Kosten:&c ${cost}'
+        - ' '
+        - '&7Einsaugradius zurzeit:&2 {suction_current}'
+        material: BEACON
+        slot: 15
+      upgrade_link-distance:
+        name: '&8> &6Maximale Reichweite verbessern'
+        lore:
+        - '&7Verbessert die maximale'
+        - '&7Distanz der Verbindung.'
+        - ' '
+        - '&7Nächstes Level:'
+        - '&7Maximale Distanz:&a {distance_next}'
+        - '&7Level:&a {next_level}'
+        - '&7Kosten:&c ${cost}'
+        - ' '
+        - '&7Maximale Distanz zurzeit:&2 {distance_current}'
+        material: COMPASS
+        slot: 16
+      filter:
+        name: '&8> &6Item Filter'
+        lore:
+        - '&7Bearbeite den Filter'
+        - '&7des Trichters.'
+        - ' '
+        - '&7Modus: {mode}'
+        - ' '
+        - '&8- &7Nutz &9Rechtsklick &7um'
+        - '  &7den Modus zu wechseln. '
+        material: OBSERVER
+        slot: 22
+      links:
+        name: '&8> &6Behälter verbinden'
+        lore:
+        - '&bLinksklick:'
+        - '&7Verbinde den Trichter'
+        - '&7mit einem Behälter.'
+        - '&9Rechtsklick:'
+        - '&7Hebe die Verbindung'
+        - '&7des Behälters auf.'
+        - ' '
+        - '&7Zurzeit verbunden mit:'
+        - '{destinations}'
+        material: CHEST
+        slot: 23
+      toggle-suction:
+        name: '&8> &6Einsaugen an/ausschalten'
+        lore:
+        - '&7Drück hier um das'
+        - '&7Einsaugen an oder auszuschalten.'
+        - ' '
+        - '&7Einsaugen: {enabled}'
+        material: BEACON
+        slot: 24
+      filter-delete:
+        name: '&8> &cItems löschen'
+        lore:
+        - ' '
+        - '&4&lACHTUNG: &cWenn das'
+        - '&caktiviert ist, wird'
+        - '&cder Trichter alle items löschen,'
+        - '&cdie nicht weitergeleitet werden.'
+        - ' '
+        - '&7Items löschen: {enabled}'
+        material: REDSTONE_BLOCK
+        slot: 25
+        enabled: false
+    a:
+      failure_max:
+        name: '&4Max. Level erreicht'
+        lore:
+        - '&7Dieser Trichter hat das'
+        - '&7höchste Level dieser'
+        - '&7Verbesseung erreicht.'
+        - ' '
+        - '&8- &7Du kannst ein Administrator'
+        - '  &7fragen ob ein weiteres'
+        - '  &7Level eingführt wird.'
+        material: RED_STAINED_GLASS_PANE
+      failure_cost:
+        name: '&4Das kannst du dir nicht leisten'
+        lore:
+        - '&7Du hast nicht genug Geld'
+        - '&7um das dir zu kaufen.'
+        - ' '
+        - '&7Du brauchst&b {cost} $&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 36
+      placeholder_2:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 12
+        to: 12
+      placeholder_3:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 21
+        to: 21
+  action-confirm:
+    title: '&8Aktion bestätigen'
+    size: 27
+    s:
+      info:
+        name: '&bBitte bestätige diese aktion.'
+        lore:
+        - '&7Drück auf &aJa &7 zum bestätigen.'
+        - '&cNein &7 um die Aktion abzubrechen.'
+        material: OAK_SIGN
+        slot: 14
+    l:
+      yes_hopper-delete:
+        name: '&aJa'
+        lore:
+        - '&7Willst du den'
+        - '&7Trichter löschen?'
+        - ' '
+        - '- &7Drück hier um den'
+        - '  &7Trichter zulöschen.'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_hopper-delete:
+        name: '&cNein'
+        lore:
+        - '&7Willst du den'
+        - '&7Trichter löschen?'
+        - ' '
+        - '- &7Drück hier um die'
+        - '  &7aktion abzubrechen.'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  filter:
+    title: '&7Filter Modus: {mode}'
+    size: 36
+    f:
+      back:
+        name: '&cZurück'
+        lore:
+        - '&7Zurück zu'
+        - '&e{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9Vorherige Seite'
+        lore:
+        - '&7Zurück zur Seite:&9 {previous}'
+        - ' '
+        - '&8- &7Zurzeit:&b {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&aNächste Seite'
+        lore:
+        - '&7Zur nächsten Seite:&9 {next}'
+        - ' '
+        - '&8- &7Zurzeit:&b {current}'
+        material: ARROW
+        slot: 34
+    l:
+      object:
+        name: '&b{item}'
+        lore:
+        - '&7Drück auf Item um'
+        - '&7es von der Liste zu'
+        - '&7entfernen.'
+        - ' '
+        - '&8- &7Du kannst den Modus'
+        - '  &7der Liste im Titel sehen.'
+        material: PAPER
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 27
+        to: 36

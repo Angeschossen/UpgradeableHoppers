@@ -199,16 +199,18 @@ gui:
         material: 'BEACON'
         slot: 24
       filter-delete:
-        name: '&8> &6Delete Items'
+        name: '&8> &cDelete Items'
         lore:
+          - ' '
           - '&4&lWARNING: &cIf enabled,'
-          - '&cthe hopper will delete'
-          - '&call items, which aren''t'
-          - '&cpassing your configured filter.'
+          - '&cthe hopper will delete all'
+          - '&citems, which aren''t passing'
+          - '&cyour configured item filter.'
           - ' '
           - '&7Filter delete: {enabled}'
         material: 'REDSTONE_BLOCK'
         slot: 25
+        enabled: false
     a:
       failure_max:
         name: '&4Max Level reached'

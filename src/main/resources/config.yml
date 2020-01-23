@@ -64,8 +64,11 @@ hopper:
   transfer-ticks: 60
 
   # Set the default hopper settings
+  # All settings can be found here:
+  # https://github.com/Angeschossen/UpgradeableHoppers/blob/master/UpgradeableHoppersAPI/src/me/angeschossen/upgradeablehoppers/api/enums/Setting.java
   default-settings:
     - SUCTION_ENABLED
+    - FILTER_BLACKLIST
 
 # Economy settings
 economy:
