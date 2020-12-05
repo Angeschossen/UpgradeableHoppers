@@ -1,51 +1,3 @@
-#  ______      _   _           ______                   _
-#  | ___ \    | | | |          |  ___|                 (_)
-#  | |_/ / ___| |_| |_ ___ _ __| |_ __ _ _ __ _ __ ___  _ _ __   __ _
-#  | ___ \/ _ \ __| __/ _ \ '__|  _/ _` | '__| '_ ` _ \| | '_ \ / _` |
-#  | |_/ /  __/ |_| ||  __/ |  | || (_| | |  | | | | | | | | | | (_| |
-#  \____/ \___|\__|\__\___|_|  \_| \__,_|_|  |_| |_| |_|_|_| |_|\__, |
-#                                                                __/ |
-#                                                               |___/
-#
-# Resource page: https://www.spigotmc.org/resources/67627
-# Discord: https://discord.gg/B4MAJVk
-#
-# If you encounter any issues, please report them
-# to discord support server or via pm.
-# Bugs or issues are mostly fixed within hours.
-#
-#
-# Here you can edit the whole GUI.
-# You can set GUI titles, the size and
-# item names, lores, materials and slots.
-# Don't remove any values or keys.
-#
-# You also can add new items to your GUI.
-# This can be done under gui.<GUI>.s.<YourItemName>
-# The name needs to be unique in this section.
-# Example:
-#
-# gui:
-#   mainmenu:
-#     p:
-#       placeholder_1:
-#       material: 'GRAY_STAINED_GLASS_PANE'
-#       from: 1
-#       to: 27
-#
-# Please note: You need to set all values
-# otherwise UpgradeableHoppers will auto generate values.
-# Also you can't set items where list items
-# are configured. Means if for example the
-# list in the UpgradeableHoppers GUI goes from slot
-# 10 - 12 you can set any items with
-# the slot 10, 11, 12. They will be ignored.
-#
-#
-# If you encounter any issues or you simply have
-# some questions, contact me via PM or Discord.
-# Discord: https://discord.gg/JVU9qd7
-
 general:
   wYes: '&aYes'
   wNo: '&cNo'
@@ -53,6 +5,7 @@ general:
   now: '&aNow'
   enabled: '&aEnabled'
   disabled: '&cDisabled'
+  previous: 'previous'
   others: 'Others'
   max: '&cMax reached'
   destination: '&a{block}&8, &7World:&2 {world}&8, &7X:&2 {x}&8, &7Y:&2 {y}&8, &7Z:&2 {z}'
@@ -121,7 +74,7 @@ gui:
           - ' '
           - '&7Current amount:&2 {transfer_current}'
         material: 'HOPPER'
-        slot: 13
+        slot: 14
       links-amount:
         name: '&8> &6Links Amount'
         lore:
@@ -134,7 +87,7 @@ gui:
           - ' '
           - '&7Current amount:&2 {links_current}'
         material: 'CHEST'
-        slot: 14
+        slot: 13
       upgrade_suction-radius:
         name: '&8> &6Upgrade Suction Radius'
         lore:
@@ -163,18 +116,6 @@ gui:
           - '&7Current maximum distance:&2 {distance_current}'
         material: 'COMPASS'
         slot: 16
-      filter:
-        name: '&8> &6Item Filter'
-        lore:
-          - '&7Edit the filter for'
-          - '&7this hopper.'
-          - ' '
-          - '&7Mode: {mode}'
-          - ' '
-          - '&8- &7Use &9RIGHT CLICK &7to'
-          - '  &7toggle the filter mode. '
-        material: 'OBSERVER'
-        slot: 22
       links:
         name: '&8> &6Link to Container'
         lore:
@@ -187,7 +128,19 @@ gui:
           - ' '
           - '&7Current links:'
           - '{destinations}'
-        material: 'CHEST'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjBiZmMyNTc3ZjZlMjZjNmM2ZjczNjVjMmM0MDc2YmNjZWU2NTMxMjQ5ODkzODJjZTkzYmNhNGZjOWUzOWIifX19'
+        slot: 22
+      filter:
+        name: '&8> &6Item Filter'
+        lore:
+          - '&7Edit the filter for'
+          - '&7this hopper.'
+          - ' '
+          - '&7Mode: {mode}'
+          - ' '
+          - '&8- &7Use &9RIGHT CLICK &7to'
+          - '  &7toggle the filter mode. '
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0='
         slot: 23
       toggle-suction:
         name: '&8> &6Toggle Suction'
@@ -196,7 +149,7 @@ gui:
           - '&7suction.'
           - ' '
           - '&7Suction: {enabled}'
-        material: 'BEACON'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0='
         slot: 24
       filter-delete:
         name: '&8> &cDelete Items'
@@ -208,7 +161,7 @@ gui:
           - '&cyour configured item filter.'
           - ' '
           - '&7Filter delete: {enabled}'
-        material: 'REDSTONE_BLOCK'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI3OGZhNWRlZmU3MmRlYmNkOWM3NmFiOWY0ZTExNDI1MDQ3OWJiOWI0NGY0Mjg4N2JiZjZmNzM4NjEyYiJ9fX0='
         slot: 25
         enabled: false
     a:
@@ -222,7 +175,6 @@ gui:
           - '&8- &7You can ask a'
           - '  &7administrator to'
           - '  &7setup a new level.'
-        material: 'RED_STAINED_GLASS_PANE'
       failure_cost:
         name: '&4You can''t afford it'
         lore:
@@ -230,7 +182,12 @@ gui:
           - '&7money to pay the cost.'
           - ' '
           - '&7You need&b {cost} $&7.'
-        material: 'RED_STAINED_GLASS_PANE'
+      failure_perm:
+        name: '&4Failure: &cUpgrades locked'
+        lore:
+          - '&7You''re missing permission'
+          - '&7{permission} to upgrade'
+          - '&7any hopper.'
     p:
       placeholder_1:
         material: 'GRAY_STAINED_GLASS_PANE'
@@ -337,3 +294,73 @@ gui:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 27
         to: 36
+  player_list:
+    title: '&7Your Upgradeable Hoppers'
+    size: 54
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '&e{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 46
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 48
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 52
+    l:
+      object:
+        name: '&6World: {world} X: {x} Y: {y} Z: {z}'
+        lore:
+          - '&7Open hopper menu.'
+          - ' '
+          - '&9RIGHT CLICK'
+          - '&7Teleport to hopper.'
+        material: 'HOPPER'
+        from: 10
+        to: 45
+      object_none:
+        name: '&7No Hoppers placed'
+        lore:
+          - '&7You did not place any'
+          - '&7upgradeable hoppers yet.'
+          - ''
+          - '&7To purchase a hopper,'
+          - '&7execute: &8/&3Hoppers get'
+          - '&7One hopper costs:&c ${cost}'
+        material: PAPER
+        from: 10
+        to: 45
+    a:
+      failure_cost:
+        name: '&4Failure: &cNot enough Money'
+        lore:
+          - '&7You need&c ${cost} &7to pay'
+          - '&7the teleportation cost.'
+      failure_permission:
+        name: '&4Failure: &cNot allowed'
+        lore:
+          - '&7You have no permission to do this.'
+          - '&8Permission: {permission}'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 45
+        to: 54
