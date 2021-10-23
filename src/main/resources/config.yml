@@ -3,9 +3,15 @@ general:
   # Language
   # Pre translated:
   # English: en-US
+  # German: de-DE by sphings_
+  # Chinese: zh-CN by asd851646427
   language: 'en-US'
+  # Worlds where upgradeable hoppers should be able to be placed.
   worlds_list:
     - 'world'
+  # Set the format of all economy related displays.
+  # NOTE: This setting requires server reload / restart.
+  eco-format: '#,###.00'
 
 
 # Database settings
@@ -20,6 +26,8 @@ database:
     ip-address: 'localhost'
     port: '3306'
     database: 'upgradeablehoppers'
+    # It is highly recommended to set a unique table prefix if the plugin shares a database with other plugins.
+    table-prefix: 'hoppers'
     user: 'minecraft'
     password: 'password'
 
@@ -31,12 +39,14 @@ command:
   # for /UpgradeableHoppers command
   # NOTE: This settings
   # requires /reload
-  aliases_list:
-    - hopper
-    - hoppers
-    - upgradehoppers
-    - uhopper
-    - uhoppers
+  alias:
+    upgradeablehoppers_list:
+      - hopper
+      - hoppers
+      - h
+      - uhopper
+      - uhoppers
+      - uh
 
 
 # Hopper Settings
@@ -51,6 +61,9 @@ hopper:
     # if you're taking it from
     # /Hopper get
     cost: 1500.0
+    # Allow buying more hoppers even if the player already reached the maximum amount of PLACED hoppers?
+    # Command: /Hoppers get [amount]
+    over-max: true
 
   # Restrict normal hoppers, which are no upgradeable hoppers.
   vanilla:
@@ -58,17 +71,69 @@ hopper:
     crafting: true
     # Allow the placing of normal hoppers?
     placing: true
+    # Should normal hoppers (not from this plugin) be converted on placement?
+    convert: false
 
   # Set the hopper transfer tick time (20 ticks are one second)
-  # It's not recommended to set this lower than 20.
+  # You should only change this, if you know what you do.
   transfer-ticks: 60
 
   # Set the default hopper settings
   # All settings can be found here:
-  # https://github.com/Angeschossen/UpgradeableHoppers/blob/master/UpgradeableHoppersAPI/src/me/angeschossen/upgradeablehoppers/api/enums/Setting.java
-  default-settings:
+  # https://github.com/Angeschossen/UpgradeableHoppersAPI/blob/master/src/main/java/me/angeschossen/upgradeablehoppers/api/enums/Setting.java
+  default-settings_list:
     - SUCTION_ENABLED
-    - FILTER_BLACKLIST
+
+  # Teleport to hoppers in /Hopper list
+  # Permission uhoppers.teleport
+  teleportation:
+    # Wait x seconds before starting teleportation.
+    wait: 3
+    # Set teleportation cost.
+    cost_2: 200
+
+  # Should only players with the uhoppers.upgrade permission be able to upgrade any hopper?
+  upgrade-perm: false
+
+  # This option requires server reload / restart.
+  recipe:
+    # Allow players to craft the hopper item?
+    enabled_4: false
+    # Each line represents a line in the crafting table.
+    # Each line must have three items.
+    recipe_list:
+      - 'IRON_INGOT,CHEST,IRON_INGOT'
+      - 'IRON_INGOT,REDSTONE,IRON_INGOT'
+      - 'AIR,IRON_INGOT,AIR'
+
+# Link / destination settings
+link:
+  # Should destinations be visualized when clicking on the setup link item in the hopper menu?
+  visualization: true
+  # Should whitelist mode be activated by default?
+  whitelist: false
+  # Should strict filtering be enabled by default?
+  strict: false
+
+# Sound configuration
+# Format: SOUND:VOLUME:PITCH
+# The volume and pitch parameter are optional. They allow you to control how the sound is played.
+# Disabling a sound: Just set it to ''
+sounds:
+  # Sound which should be played whenever a player gets teleported by Lands.
+  # Sounds can be disabled by setting their value to ''
+  teleport:
+    teleported_sound: 'ENTITY_ENDERMAN_TELEPORT'
+    countdown_sound: 'BLOCK_LEVER_CLICK'
+
+# Protection settings
+protection:
+  # Should upgradeable hoppers be protected?
+  # NOTE: If disabled, everyone can destroy, upgrade, open the hopper.
+  enabled_3: true
+  # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox
+  # Allow players, which are trusted in the region where the hopper is located in, to edit the hopper?
+  allow-region-members: false
 
 # Economy settings
 economy:
@@ -85,3 +150,16 @@ economy:
     default: 'DIAMOND'
     # Use experience Levels as economy?
     exp-levels: false
+
+
+
+# 3rd party plugin integrations
+integration:
+  lands:
+    # Should players be allowed to place hoppers only in claimed areas where they're trusted?
+    only-claimed: false
+
+  # If you use any 3rd party plugin for item stacking, please enable it here to make sure UpradeableHoppers can read the correct item stack amount.
+  # Currently supported: WildStacker, RoseStacker, zItemStacker
+  # Yours isn't listed? 3rd party developers can integrate their ItemStacker via this method: https://github.com/Angeschossen/UpgradeableHoppersAPI/blob/25dc754a635908de161685d0fa0f9795d2f65bab/src/main/java/me/angeschossen/upgradeablehoppers/api/UpgradeableHoppersAPI.java#L28
+  item-stacker: 'default'
