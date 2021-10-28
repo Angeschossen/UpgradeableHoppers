@@ -10,8 +10,8 @@ general:
     bossbar: '&7Wait&5 {time} &7Second(s) until Teleportation.'
 message:
   hopper:
-    created: '#t#&9&lHopper{newline}&7Successfully created.'
-    deleted: '#t#&9&lHopper{newline}&cSuccessfully deleted.'
+    created: '#t#{type}{newline}&7Successfully created.'
+    deleted: '#t#{type}{newline}&cSuccessfully deleted.'
     link:
       click: '&7Click on a container or hopper to link it with this hopper.'
       inventory: '&cYou can''t link this block. &7It needs to be a container.'
@@ -25,6 +25,7 @@ message:
         the hopper menu.'
       max: '&cYou can''t link any more containers to this hopper. &7You reached the
         maximum of&3 {max} &7links. &7You can upgrade the amount in the hoppers menu.'
+      untrusted: '&cYou can''t link containers that are located in claims in which you''re not trusted.'
       success: '#t#&9&lHopper{newline}&7Successfully linked.'
     unlink:
       click: '&7Click on a container or hopper to unlink it from this hopper.'
@@ -65,6 +66,14 @@ message:
     unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
     corrected: '&7The original teleport destination was unsafe. &7Your final destination
       has been corrected to a safe location.'
+    cmd: '&cYou can''t use any commands while beeing teleported. &7Please wait another&5 {sec} seconds &7until the teleportation has been finished.'
+
+
+  chat-input:
+    player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel" to abort.'
+    rename: '#t#&6Enter a new Name[newline]&7for this link in chat[newline]&7Enter "cancel" to abort.'
+    name: '#t#&6Enter the Name[newline]&7in chat[newline]&7Enter "cancel" to abort.'
+
 command:
   general:
     no-permission: '&cYou don''t have permission to do this. &8You need permission
@@ -74,6 +83,7 @@ command:
     invalid-number: '&cYou entered an invalid number at the&e {argument} &cargument.
       &7Please insert a valid number there.'
   get:
+    type: '&cThe hopper type&4 {input} &cdoesn''t exist. &7Valid types: {types}'
     max: '&cYou can''t buy&4 {amount} &cmore hopper(s). &7You can at most buy&3 {max}
       &7more hopper(s). &8Permission: uhoppers.hoppers.NUMBER'
     confirmation: |
@@ -102,8 +112,8 @@ command:
 help:
   command:
     help: '&8/&3Hoppers help &8[&3page&8] - &7Get help'
-    get: '&8/&3Hoppers get &8- &7Get hopper'
-    give: '&8/&3Hoppers give &8<&3player&8> [&3amount&8] - &7Give hopper(s)'
+    get: '&8/&3Hoppers get &8[&3type&8] - &7Get hopper'
+    give: '&8/&3Hoppers give &8<&3player&8> &8<&3type&8> [&3amount&8] - &7Give hopper(s)'
     list: '&8/&3Hoppers list &8- &7View your hoppers'
     admin:
       admin: '&8/&3Hoppers admin &8<&3sub-command&8> - &7Admin commands'
