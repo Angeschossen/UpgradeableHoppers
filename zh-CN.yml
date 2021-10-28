@@ -1,0 +1,84 @@
+general:
+  prefix:
+    normal: '&8[&9漏斗系统&8] '
+    help: '&8[&9漏斗系统&8] &7用法 > '
+  time:
+    seconds: 秒
+    minutes: 分
+    hours: 时
+  teleportation:
+    bossbar: '&7等待&5 {time} &7秒后传送'
+message:
+  hopper:
+    created: '#t#&9&l漏斗{newline}&7放置成功'
+    deleted: '#t#&9&l漏斗{newline}&c拆卸成功'
+    link:
+      click: '&7点击一个容器来使其与漏斗连接'
+      inventory: '&c你不能连接这个方块,因为它不是容器类方块'
+      origin: '&c你不能让漏斗连接到它自己身上'
+      world: '&c你不能跨世界连接容器&7要连接的容器和漏斗需要在同一世界'
+      max-distance: '&c这个容器距离你的漏斗太远了,&7最大距离为&3 {distance}&7你可以在菜单中升级漏斗的连接距离上限'
+      already: '&c这个容器已经被漏斗连接了&7想要插件连接的容器,请打开漏斗菜单查看'
+      max: '&c这个漏斗不能再连接更多的容器了 &7你最多能连接&3 {max} &7个,你可以在菜单中升级漏斗的连接数量上限'
+      success: '#t#&9&l漏斗{newline}&7连接成功'
+    unlink:
+      click: '&7点击漏斗或连接的容器来断开连接'
+      not-linked: '&c该容器没有被任何漏斗连接'
+      success: '#t#&9&l漏斗{newline}&7连接断开'
+  no-access:
+    upgrade: '&c你不能升级这个漏斗. &7它属于&3 {owner}'
+    open: '&c你不能打开这个漏斗. &7它属于&3{owner}'
+    delete: '&c你不能拆除这个漏斗. &7它属于&3 {owner}'
+    link: '&c你无法与这个漏斗创建连接. &7它属于&3{owner}'
+    vanilla:
+      craft: '&c你无法合成漏斗.&7管理员已禁止该功能.&7使用 &8/&aHopper get &7来购买漏斗.强行合成所需权限: uhoppers.bypass.vanilla.craft'
+      place: '&c你无法放置普通漏斗.&7管理员已禁止该功能.&7使用 &8/&aHopper get &7来购买漏斗.强行放置所需权限: uhoppers.bypass.vanilla.place'
+  creation:
+    world: '&c你无法在这个世界使用漏斗.&7你可以让管理员在config中添加&3{world}&7的漏斗使用功能'
+    owner: '&c你不能放置这个漏斗.&7它属于&3 {owner}&7.&8可在Config中修改参数: only-owner'
+    max: '&c你不能放置更多的漏斗了.&7你最多可放置&3 {max}&7个.&8放置数量限制所需权限: uhoppers.hoppers.数量'
+    only-claim: '&c你只能在你认领的区域内放置漏斗'
+    convert-perm: '&c无法将该漏斗转换为普通漏斗. &7你最大拥有&3 {max}&8放置数量限制所需权限 uhoppers.hoppers.数量'
+  teleportation:
+    already: '&c已有一个传送正在进行中'
+    started: '&7传送开始,&5 {sec} &7秒内请勿移动'
+    cancelled: '&c传送已取消,请在&5 {sec} &7秒内不要移动'
+    plugin: '&c传送已被第三方插件阻止,请检查你的相关插件.&7这不是Lands插件的问题'
+    unsafe: '&c传送已取消,你要传送的目的地位置不安全'
+    corrected: '&7原传送目的地位置不安全. &7已为你更换一个安全的位置'
+command:
+  general:
+    no-permission: '&c你没有权限这么做. &8缺少权限 {permission}.'
+    cant-afford: '&c你的钱不够了. &7你需要&3 {cost} &7金币来支付漏斗费用'
+    player-offline: '&c无法找到该玩家r.&7玩家&3 {player} &7不在线'
+    invalid-number: '&c无效的数字&e {argument} &7请重新输入有效的数字'
+  get:
+    max: '&c你不能购买&4 {amount} &c个以上的漏斗了.&7你现在最多可购买&3 {max}&7个.&8设置数量限制所需权限: uhoppers.hoppers.数量'
+    confirmation: |
+      &c请确认购买. &7购买漏斗将会花费你&c ${costs}&7金币.
+
+      [T]&7确认: &8[&7点击&8][H]&7点击确认购买[/H][C]upgradeablehoppers get {amount} confirm[/C][/T]
+    dropped: '&7你花费了&3{cost} &7金币购买了 &3{amount} &7个漏斗,但因你背包已满,所以购买的漏斗已经掉落到地面上,请及时拾取.'
+    success: '&7你花费了&3{cost} &7金币购买了 &3{amount} &7个漏斗,它们现在已经买到你的背包里了'
+  give:
+    success-sender: '&7已将&3{items}&7个漏斗发送给玩家&3{player}'
+    success-target: '&7你收到了&3{items}&7个漏斗.它们现在已经放到你的背包里了'
+    dropped: '&7你收到了&3{items}&7个漏斗.但因你背包已满,所以购买的漏斗已经掉落到地面上,请及时拾取.'
+  list:
+    retrieving: '&7正在检索放置的漏斗的位置'
+  help:
+    header: '[NoPrefix]&7----------<- &9UpgradeHoppers 帮助 &7页数&3 {page} &8/&3
+      {pages} &7->----------'
+    footer: '[NoPrefix]&7----------<- &9UpgradeHoppers 帮助 &7页数&3 {page} &8/&3
+      {pages} &7->----------'
+    help: '&7Use &8/&3{cmd} help &7查看帮助'
+    cmd-not-exist: '&c该指令不存在. &7未找到指令&3 {command}'
+help:
+  command:
+    help: '&8/&3Hoppers help &8[&3页数&8] - &7查看插件帮助'
+    get: '&8/&3Hoppers get &8- &7购买漏斗'
+    give: '&8/&3Hoppers give &8<&3玩家&8> [&3数量&8] - &7给予玩家指定数量的漏斗'
+    list: '&8/&3Hoppers list &8- &7查看你放置的漏斗'
+    admin:
+      admin: '&8/&3Hoppers admin &8<&3sub-command&8> - &7管理员指令'
+      reload: '&8/&3Hoppers reload &8- &7重载插件 &d&n汉化By Azitate'
