@@ -38,7 +38,9 @@
 
 
 general:
-  prefix: '&7&l| &9Trichter &8» '
+  prefix:
+    normal: '&7&l| &9Trichter &8» '
+    help: '&7&l| &9Trichter &8» &eNutzung: '
   time:
     seconds: Sekunde(n)
     minutes: Minute(n)
@@ -61,8 +63,6 @@ message:
       not-linked: '&cDieser Behälter ist nicht mit dem Trichter verbunden. &7Nichts hat sich geändert.'
       success: '#t#&9&lBehälter{newline}&7Erfolgreich getrennt.'
   no-access:
-    no-permission: '&cDu hast nicht die benötigte Berechtigung um das zu tun. &7Du brauchst:&b
-      {permission}&7.'
     upgrade: '&cDir ist es nicht erlaubt, den Trichter zu verbessern. &7Er gehört &b{owner}&7.'
     open: '&cDir ist es nicht erlaubt, den Trichter zu öffnen. &7Er gehört &b{owner}&7.'
     delete: '&cDir ist es nicht erlaubt, den Trichter abzubauen. &7Er gehört &b{owner}&7.'
@@ -76,7 +76,8 @@ message:
       Berechtigung:&5 uhoppers.hoppers.NUMBER'
 command:
   general:
-    cmd-not-exist: '&cDieser Befehl existiert nicht.'
+    no-permission: '&cDu hast nicht die benötigte Berechtigung um das zu tun. &7Du brauchst:&b
+      {permission}&7.'
     cant-afford: '&cDas kannst du dir nicht leisten. &7Du brauchst&b ${cost} &7.'
     player-offline: '&cDer Spieler {player} ist offline.'
     invalid-number: '&e{argument} &cist keine gültige Zahl.'
@@ -90,13 +91,10 @@ command:
     dropped: '&7Du hast&b {items} &7Trichter erhalten. &cSie wurde auf den Boden fallen gelassen, weil du nicht genug Platz im Inventar hast.'
   help:
     page-not-exist: '&cDie Seite&e {page} &cexistiert nicht.'
-help:
-  cmd-unknown: '&cDieser Befehl existiert nicht. Siehe /hoppers help'
-  general:
-    prefix: '&7Verwendung: '
     header: '&7-------<- &9Lebelbare Trichter Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
-    page: '&7Use &8/&7hoppers help {next} &7für die nächste Seite. <> = notwendig, [] = optional'
     footer: '&7-------<- &9Lebelbare Trichter Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+    cmd-not-exist: '&cDieser Befehl existiert nicht. Siehe /hoppers help'
+help:
   command:
     help: '&8/&ahoppers help &8[&aSeite&8] - &7Zeigt Hilfe an'
     get: '&8/&ahoppers get &8- &7Erhalte ein Trichter'
@@ -104,3 +102,4 @@ help:
     list: '&8/&ahoppers list &8- &7Listet deine Trichter auf'
     admin:
       reload: '&8/&ahoppers reload &8- &7Lädt die Konfiguration neu'
+      admin: '&8/&ahoppers admin &8- &7Admin Befehle'
