@@ -90,20 +90,20 @@ physical-Item:
     name: '&aTrichter Item'
     lore:
     - '&7Mit diesem Item'
-    - '&7erstellt du einen'
-    - '&7besseren Trichter'
-    - '&7wenn du ihn setzt.'
+    - '&7erstellst du einen'
+    - '&7besseren Trichter,'
+    - '&7wenn du ihn platzierst.'
     - ' '
     - '&8- &7Besitzer:&2 {owner}'
     - ' '
     - '&8- &7Übertragungsanzahl:&a {transfer}'
-    - '  &7Einsaug Radius:&a {suction}'
-    - '  &7Verbindungsmöglichkeiten:&a {links}'
-    - '  &7Verbindungslänge:&a {distance} &7Blöcke'
+    - '  &7Einsaugradius:&a {suction}'
+    - '  &7Maximale Verbindungen:&a {links}'
+    - '  &7Reichweite:&a {distance} &7Blöcke'
     material: HOPPER
 gui:
   hopper_main:
-    title: '&8Trichter Menu'
+    title: '&8Trichter Menü'
     size: 36
     s:
       close:
@@ -113,23 +113,22 @@ gui:
         - ' '
         - '&8- &7Du kannst das Menü'
         - '  &7wieder öffnen, wenn du'
-        - '  &7Rechtsklick auf den '
-        - '  &7Trichter machst.'
+        - '  &7den Trichter rechtsklickst.'
         material: RED_STAINED_GLASS_PANE
         slot: 9
       upgrades:
         name: '&6Verbesserungen'
         lore:
-        - '&7IIn dieser Reihe siehst'
+        - '&7In dieser Reihe siehst'
         - '&7du alle Verbesseungen.'
         material: ENCHANTED_GOLDEN_APPLE
         slot: 11
       configurations:
-        name: '&6Konfiguration'
+        name: '&6Konfigurationen'
         lore:
         - '&7In dieser Reihe siehst'
-        - '&7du alle Konfigurationsmöglichkeiten'
-        - '&7des Trichters.'
+        - '&7du alle Konfigurations-'
+        - '&7möglichkeiten des Trichters.'
         material: COMMAND_BLOCK
         slot: 20
     f:
@@ -147,22 +146,22 @@ gui:
         material: HOPPER
         slot: 13
       links-amount:
-        name: '&8> &6Verbindungsmöglichkeiten verbessern'
+        name: '&8> &6Anzahl der Verbindungen verbessern'
         lore:
-        - '&7Verbessert die Verbindungsmöglichkeiten.'
+        - '&7Erhöht die Anzahl der Verbindungen.'
         - ' '
         - '&7Nächstes Level:'
         - '&7Anzahl:&a {links_next}'
         - '&7Level:&a {next_level}'
         - '&7Kosten:&c ${cost}'
         - ' '
-        - '&7Verbindungsmöglichkeiten:&2 {links_current}'
+        - '&7Anzahl der Verbindungen:&2 {links_current}'
         material: CHEST
         slot: 14
       upgrade_suction-radius:
         name: '&8> &6Einsaugradius verbessern'
         lore:
-        - '&7Verbessert den Einsaugradius.'
+        - '&7Erhöht den Einsaugradius.'
         - ' '
         - '&7Nächstes Level:'
         - '&7Radius:&a {suction_next}'
@@ -173,17 +172,16 @@ gui:
         material: BEACON
         slot: 15
       upgrade_link-distance:
-        name: '&8> &6Maximale Reichweite verbessern'
+        name: '&8> &6Reichweite verbessern'
         lore:
-        - '&7Verbessert die maximale'
-        - '&7Distanz der Verbindung.'
+        - '&7Erhöht die Reichweite'
         - ' '
         - '&7Nächstes Level:'
         - '&7Maximale Distanz:&a {distance_next}'
         - '&7Level:&a {next_level}'
         - '&7Kosten:&c ${cost}'
         - ' '
-        - '&7Maximale Distanz zurzeit:&2 {distance_current}'
+        - '&7Reichweite zurzeit:&2 {distance_current}'
         material: COMPASS
         slot: 16
       filter:
@@ -194,7 +192,7 @@ gui:
         - ' '
         - '&7Modus: {mode}'
         - ' '
-        - '&8- &7Nutz &9Rechtsklick &7um'
+        - '&8- &7Nutze &9Rechtsklick, um'
         - '  &7den Modus zu wechseln. '
         material: OBSERVER
         slot: 22
@@ -216,21 +214,21 @@ gui:
         name: '&8> &6Einsaugen an/ausschalten'
         lore:
         - '&7Drück hier um das'
-        - '&7Einsaugen an oder auszuschalten.'
+        - '&7Einsaugen ein- oder auszuschalten.'
         - ' '
         - '&7Einsaugen: {enabled}'
         material: BEACON
         slot: 24
       filter-delete:
-        name: '&8> &cItems löschen'
+        name: '&8> &cItems vernichten'
         lore:
         - ' '
         - '&4&lACHTUNG: &cWenn das'
         - '&caktiviert ist, wird'
-        - '&cder Trichter alle items löschen,'
+        - '&cder Trichter alle items vernichten,'
         - '&cdie nicht weitergeleitet werden.'
         - ' '
-        - '&7Items löschen: {enabled}'
+        - '&7Items vernichten: {enabled}'
         material: REDSTONE_BLOCK
         slot: 25
         enabled: false
@@ -242,15 +240,15 @@ gui:
         - '&7höchste Level dieser'
         - '&7Verbesseung erreicht.'
         - ' '
-        - '&8- &7Du kannst ein Administrator'
-        - '  &7fragen ob ein weiteres'
+        - '&8- &7Du kannst einen Administrator'
+        - '  &7fragen, ob ein weiteres'
         - '  &7Level eingführt wird.'
         material: RED_STAINED_GLASS_PANE
       failure_cost:
         name: '&4Das kannst du dir nicht leisten'
         lore:
-        - '&7Du hast nicht genug Geld'
-        - '&7um das dir zu kaufen.'
+        - '&7Du hast nicht genug Geld,'
+        - '&7um dir das zu kaufen.'
         - ' '
         - '&7Du brauchst&b {cost} $&7.'
         material: RED_STAINED_GLASS_PANE
@@ -272,10 +270,10 @@ gui:
     size: 27
     s:
       info:
-        name: '&bBitte bestätige diese aktion.'
+        name: '&bBitte bestätige diese Aktion.'
         lore:
-        - '&7Drück auf &aJa &7 zum bestätigen.'
-        - '&cNein &7 um die Aktion abzubrechen.'
+        - '&7Wähle &aJa &7zum Bestätigen.'
+        - '&7Wähle &cNein&7, um die Aktion abzubrechen.'
         material: OAK_SIGN
         slot: 14
     l:
@@ -285,8 +283,8 @@ gui:
         - '&7Willst du den'
         - '&7Trichter löschen?'
         - ' '
-        - '- &7Drück hier um den'
-        - '  &7Trichter zulöschen.'
+        - '- &7Klicke hier, um den'
+        - '  &7Trichter zu löschen.'
         material: LIME_STAINED_GLASS_PANE
         from: 10
         to: 13
@@ -296,8 +294,8 @@ gui:
         - '&7Willst du den'
         - '&7Trichter löschen?'
         - ' '
-        - '- &7Drück hier um die'
-        - '  &7aktion abzubrechen.'
+        - '- &7Klicke hier, um die'
+        - '  &7Aktion abzubrechen.'
         material: RED_STAINED_GLASS_PANE
         from: 15
         to: 18
@@ -341,7 +339,7 @@ gui:
       object:
         name: '&b{item}'
         lore:
-        - '&7Drück auf Item um'
+        - '&7Klicke auf ein Item, um'
         - '&7es von der Liste zu'
         - '&7entfernen.'
         - ' '
