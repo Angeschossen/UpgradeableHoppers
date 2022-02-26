@@ -213,7 +213,7 @@ gui:
       toggle-suction:
         name: '&8> &6Einsaugen an/ausschalten'
         lore:
-        - '&7Drück hier um das'
+        - '&7Klicke hier, um das'
         - '&7Einsaugen ein- oder auszuschalten.'
         - ' '
         - '&7Einsaugen: {enabled}'
@@ -223,7 +223,7 @@ gui:
         name: '&8> &cItems vernichten'
         lore:
         - ' '
-        - '&4&lACHTUNG: &cWenn das'
+        - '&4&lACHTUNG: &cWenn diese Option'
         - '&caktiviert ist, wird'
         - '&cder Trichter alle items vernichten,'
         - '&cdie nicht weitergeleitet werden.'

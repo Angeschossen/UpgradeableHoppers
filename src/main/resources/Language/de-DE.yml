@@ -38,7 +38,7 @@
 
 
 general:
-  prefix: '&8[&9UpgradeTrichter&8] '
+  prefix: '&7&l| &9Trichter &8» '
   time:
     seconds: Sekunde(n)
     minutes: Minute(n)
@@ -91,14 +91,16 @@ command:
   help:
     page-not-exist: '&cDie Seite&e {page} &cexistiert nicht.'
 help:
+  cmd-unknown: '&cDieser Befehl existiert nicht. Siehe /hoppers help'
   general:
     prefix: '&7Verwendung: '
-    header: '&7-------<- &9UpgradeHoppers Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+    header: '&7-------<- &9Lebelbare Trichter Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
     page: '&7Use &8/&7hoppers help {next} &7für die nächste Seite. <> = notwendig, [] = optional'
-    footer: '&7-------<- &9UpgradeHoppers Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
+    footer: '&7-------<- &9Lebelbare Trichter Hilfe &7Seite&6 {page} &8/&e {pages} &7->-------&a'
   command:
-    help: '&8/&ahoppers help &8[&aSeite&8] - &7Hilfe seite'
+    help: '&8/&ahoppers help &8[&aSeite&8] - &7Zeigt Hilfe an'
     get: '&8/&ahoppers get &8- &7Erhalte ein Trichter'
     give: '&8/&ahoppers give &8<&7Spieler&8> [&7Anzahl&8] - &7Gibt dem Spieler einen oder mehrere Trichter'
+    list: '&8/&ahoppers list &8- &7Listet deine Trichter auf'
     admin:
       reload: '&8/&ahoppers reload &8- &7Lädt die Konfiguration neu'
