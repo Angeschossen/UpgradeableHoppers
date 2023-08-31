@@ -1,0 +1,77 @@
+name: UpgradeableHoppers
+main: me.angeschossen.upgradeablehoppers.UpgradeableHoppers
+version: ${project.version}
+author: Angeschossen
+api-version: 1.13
+softdepend: [ShopGUIPlus, Lands, Vault, SuperiorSkyblock2, BentoBox, WildStacker, WildChests, RoseStacker, AdvancedChests, PlotSquared, WorldGuard]
+
+
+commands:
+  upgradeablehoppers:
+    description: UpgradeableHoppers main command.
+
+permissions:
+  uhoppers.*:
+    description: Access to all UpgradeableHoppers actions
+    default: op
+    children:
+      uhoppers.hoppers.<number>:
+        description: Give players permission to create specific amount of hoppers.
+        default: op
+      uhoppers.links.<number>:
+        description: Give players permission to link specific amount of containers per hopper.
+        default: op
+      uhoppers.teleportation:
+        description: Allow teleportation to a hopper through /Hopper list
+        default: op
+      uhoppers.command.*:
+        description: Access to all commands.
+        default: op
+        children:
+          uhoppers.command.get:
+            description: Access to /UpgradeableHoppers get command
+            default: op
+          uhoppers.command.give:
+            description: Access to /UpgradeableHoppers give command
+            default: op
+          uhoppers.command.help:
+            description: Access to /UpgradeableHoppers help command
+            default: op
+      uhoppers.admin.command.*:
+        description: Access to all admin commands.
+        default: op
+        children:
+          uhoppers.admin.command.reload:
+            description: Access to /UpgradeableHoppers reload command
+            default: op
+      uhoppers.bypass.*:
+        description: Bypass protections etc.
+        default: op
+        children:
+          uhoppers.bypass.open:
+            description: Open other players hoppers.
+            default: op
+          uhoppers.bypass.upgrade:
+            description: Upgrade other players hoppers.
+            default: op
+          uhoppers.bypass.delete:
+            description: Delete other players hoppers.
+            default: op
+          uhoppers.bypass.claim:
+            description: Allow linking in claims the player is not trusted in.
+            default: op
+          uhoppers.bypass.only-land:
+            description: Bypass only-land option in config.yml and not being able to place spawners in lands they're not trusted in.
+          uhoppers.bypass.vanilla.*:
+            description: Bypass all vanilla hopper settings.
+            default: op
+            children:
+              uhoppers.bypass.vanilla.craft:
+                description: Bypass vanilla hopper craft setting.
+                default: op
+              uhoppers.bypass.vanilla.place:
+                description: Bypass vanilla hopper place setting.
+                default: op
+      uhoppers.upgrade:
+        description: Only allow players with this permission to upgrade any hopper, if config option upgrade-perm enabled.
+        default: op

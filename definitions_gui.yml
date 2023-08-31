@@ -1,0 +1,109 @@
+physical:
+  hopper:
+    material: 'HOPPER'
+  currency:
+    material: GOLD_INGOT
+
+
+# Common Sounds
+# These are applied to all items starting with the defined prefix.
+common_sounds:
+  # Play a sound when the item is set in the menu.
+  set:
+    # Each item starting with [item_type]_failure_<name> will have this sound set.
+    # You can still override the "sound_set" for any item in their sections.
+    failure: ENTITY_VILLAGER_NO
+
+
+common:
+  size: 45
+  entries: 10-36
+  items:
+    default:
+      back:
+        material: RED_STAINED_GLASS_PANE
+        slots: 37
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        slots: 1-45
+      refresh_page_previous:
+        material: 'ARROW'
+        slots: 38
+      refresh_page_next:
+        material: 'ARROW'
+        slots: 44
+
+gui:
+  hopper_main:
+    items:
+      default:
+        links:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNThiYzhmYTcxNmNhZGQwMDRiODI4Y2IyN2NjMGY2ZjZhZGUzYmU0MTUxMTY4OGNhOWVjZWZmZDE2NDdmYjkifX19'
+          slots: 30
+        upgrade_transfer_amount:
+          material: 'HOPPER'
+          slots: 12
+        refresh_upgrade_links_amount:
+          material: 'CHEST'
+          slots: 11
+        upgrade_suction_radius:
+          material: 'BEACON'
+          slots: 13
+        upgrade_suction_radius_chunk:
+          material: 'BEACON'
+          slots: 13
+        upgrade_link_distance:
+          material: 'COMPASS'
+          slots: 14
+        linking:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjBiZmMyNTc3ZjZlMjZjNmM2ZjczNjVjMmM0MDc2YmNjZWU2NTMxMjQ5ODkzODJjZTkzYmNhNGZjOWUzOWIifX19'
+          slots: 29
+        toggle-suction:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0='
+          slots: 31
+        filter-delete:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI3OGZhNWRlZmU3MmRlYmNkOWM3NmFiOWY0ZTExNDI1MDQ3OWJiOWI0NGY0Mjg4N2JiZjZmNzM4NjEyYiJ9fX0='
+          slots: 32
+
+  list_filter:
+    items:
+      default:
+        whitelist:
+          material: 'HOPPER'
+          slots: 40
+        strict:
+          material: 'OAK_DOOR'
+          slots: 41
+        refresh_copy_paste:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTRjMjhmZmI5MDYzZTYzMDM3YzdjOWMzYTk5OTc1MzMzMjU0OTQ2ZGRmYTAwMTg5OTYxNTE3NDBhNWM2Njg0MiJ9fX0='
+          slots: 42
+        entry_object:
+          material: 'INHERIT'
+
+  list_links:
+    items:
+      default:
+        refresh_insert_by_order:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiYzJiY2ZiMmJkMzc1OWU2YjFlODZmYzdhNzk1ODVlMTEyN2RkMzU3ZmMyMDI4OTNmOWRlMjQxYmM5ZTUzMCJ9fX0='
+          slots: 41
+        entry_object:
+          material: 'INHERIT'
+
+  list_player_list:
+    items:
+      default:
+        entry_object:
+          material: 'HOPPER'
+
+  action-confirm:
+    items:
+      default:
+        info:
+          material: OAK_SIGN
+          slots: [5,14,23,32,41]
+        confirm:
+          material: LIME_STAINED_GLASS_PANE
+          slots: [1-4,10-13,19-22,28-31,37-40]
+        cancel:
+          material: RED_STAINED_GLASS_PANE
+          slots: [6-9,15-18,24-27,33-36,42-45]
