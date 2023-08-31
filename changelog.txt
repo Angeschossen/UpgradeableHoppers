@@ -1,1 +1,2 @@
-+ Added: [Suggestion] Make /hopper abort re-open the hopper menu
++ Improved: API additions
++ Added: API -> documentation
