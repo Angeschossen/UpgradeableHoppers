@@ -1,2 +1,3 @@
-+ Improved: API additions
-+ Added: API -> documentation
+- Fixed: [#2384] async event call
++ Added: Support for superiorskyblock item pickup flag
++ Improved: Instead of deleting hoppers from the database
