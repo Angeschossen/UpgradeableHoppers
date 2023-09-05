@@ -1,3 +1,1 @@
-- Fixed: [#2384] async event call
-+ Added: Support for superiorskyblock2 item pickup flag
-+ Improved: make hoppers claimable, instead of deleting hoppers from the database on land deletion
+- Fixed: Superiorsykblock flag typo
