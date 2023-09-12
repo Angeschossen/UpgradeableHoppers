@@ -1,1 +1,1 @@
-- Fixed: Superiorsykblock flag typo
+- Fixed: Reported issues
