@@ -61,7 +61,7 @@ permissions:
             description: Allow linking in claims the player is not trusted in.
             default: op
           uhoppers.bypass.only-land:
-            description: Bypass only-land option in config.yml and not being able to place spawners in lands they're not trusted in.
+            description: Bypass only-land option in config.yml and not being able to place hoppers in lands they're not trusted in.
           uhoppers.bypass.vanilla.*:
             description: Bypass all vanilla hopper settings.
             default: op

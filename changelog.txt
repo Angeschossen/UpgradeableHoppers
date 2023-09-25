@@ -1,1 +1,1 @@
-- Fixed: Reported issues
++ Added: GUI multi lang support
