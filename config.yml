@@ -2,6 +2,7 @@
 # General settings
 general:
   # Default: English (en-US) - no download required.
+  # This defines the default language. You can place multiple locales in the plugin's "Language" folder to display different locales depending on the player's locale.
   # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
   # To access translations, other than en-US, execute /translations in the Discord server.
   language: 'en-US'
@@ -77,7 +78,7 @@ hopper:
 
   # Set the default hopper settings
   # All settings can be found here:
-  # https://github.com/Angeschossen/UpgradeableHoppersAPI/blob/master/src/main/java/me/angeschossen/upgradeablehoppers/api/enums/Setting.java
+  # https://github.com/Angeschossen/UpgradeableHoppersAPI/blob/master/src/main/java/me/angeschossen/upgradeablehoppers/api/enums/HopperFlag.java
   default-settings_list:
     - SUCTION_ENABLED
 
@@ -95,7 +96,7 @@ hopper:
 optimization:
   redstone:
     # Should hoppers stop transferring items if they're powered by redstone?
-    pause-on-signal: true
+    pause-on-signal: false
     # Should the emitted redstone signal strength be updated with every item insertion and removal?
     # This affects both hoppers and links.
     update-signal:
@@ -113,6 +114,10 @@ optimization:
   # This helps servers that use a fast transfer speed (like 10 ticks). This prevents checking full chests over and over again.
   # This also applies to hoppers.
   full-cooldown: true
+
+  # Should the inventory state of links be synced regularly?
+  # You should keep this enabled, if you use any 3rd party plugins that modify containers.
+  inv-sync: true
 
 
 # General Teleportation Settings
