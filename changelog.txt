@@ -1,4 +1,1 @@
-+ Added: inv-sync option
-  # Should the inventory state of links be synced regularly?
-  # You should keep this enabled, if you use any 3rd party plugins that modify containers.
-  inv-sync: true
++ Improved: performance of redstone hopper pause

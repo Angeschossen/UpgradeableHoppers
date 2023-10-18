@@ -96,7 +96,7 @@ hopper:
 optimization:
   redstone:
     # Should hoppers stop transferring items if they're powered by redstone?
-    pause-on-signal: false
+    pause-on-signal: true
     # Should the emitted redstone signal strength be updated with every item insertion and removal?
     # This affects both hoppers and links.
     update-signal:
