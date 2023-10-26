@@ -20,7 +20,13 @@ general:
     # This format is only used by a small amount of messages.
     short: '${value}k'
 
+  # If enabled, limit permissions will be combined instead of just taking the highest value.
+  # Example: A player has the permission uhoppers.hoppers.5 and uhoppers.hoppers.2.
+  #          If enabled: This will result in a limit of 7 hoppers.
+  #          If disabled: This will result in a limit of 5 hoppers.
+  permission-stacking: false
 
+  
 # Database settings
 database:
   # MySQL

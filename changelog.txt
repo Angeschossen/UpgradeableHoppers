@@ -1,1 +1,1 @@
-- Fixed: [#2362] AdvancedChest breaking not registered
+- Fixed: [#2405] Item suction behaviour for items with a max stack size lower than 64
