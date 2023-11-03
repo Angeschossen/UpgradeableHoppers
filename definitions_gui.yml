@@ -38,7 +38,7 @@ gui:
     items:
       default:
         links:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNThiYzhmYTcxNmNhZGQwMDRiODI4Y2IyN2NjMGY2ZjZhZGUzYmU0MTUxMTY4OGNhOWVjZWZmZDE2NDdmYjkifX19'
+          material: skin:f98bc63f05f6378bf29ef10e3d82acb3ceb73a720bf80f30bc576d0ad8c40cfb
           slots: 30
         upgrade_transfer_amount:
           material: 'HOPPER'
@@ -56,13 +56,13 @@ gui:
           material: 'COMPASS'
           slots: 14
         linking:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjBiZmMyNTc3ZjZlMjZjNmM2ZjczNjVjMmM0MDc2YmNjZWU2NTMxMjQ5ODkzODJjZTkzYmNhNGZjOWUzOWIifX19'
+          material: skin:26e6696b63738bbcc5fd973709ea90997215b0cfeece20b2659cb7b35f1bf0
           slots: 29
         toggle-suction:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0='
+          material: skin:ec2ff244dfc9dd3a2cef63112e7502dc6367b0d02132950347b2b479a72366dd
           slots: 31
         filter-delete:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI3OGZhNWRlZmU3MmRlYmNkOWM3NmFiOWY0ZTExNDI1MDQ3OWJiOWI0NGY0Mjg4N2JiZjZmNzM4NjEyYiJ9fX0='
+          material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 32
 
   list_filter:
@@ -75,7 +75,7 @@ gui:
           material: 'OAK_DOOR'
           slots: 41
         refresh_copy_paste:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTRjMjhmZmI5MDYzZTYzMDM3YzdjOWMzYTk5OTc1MzMzMjU0OTQ2ZGRmYTAwMTg5OTYxNTE3NDBhNWM2Njg0MiJ9fX0='
+          material: skin:94c28ffb9063e63037c7c9c3a99975333254946ddfa0018996151740a5c66842
           slots: 42
         entry_object:
           material: 'INHERIT'
@@ -84,7 +84,7 @@ gui:
     items:
       default:
         refresh_insert_by_order:
-          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiYzJiY2ZiMmJkMzc1OWU2YjFlODZmYzdhNzk1ODVlMTEyN2RkMzU3ZmMyMDI4OTNmOWRlMjQxYmM5ZTUzMCJ9fX0='
+          material: COMPARATOR
           slots: 41
         entry_object:
           material: 'INHERIT'
