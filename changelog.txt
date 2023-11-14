@@ -1,1 +1,3 @@
-- Fixed: [#2396] filter items pagination
++ Added: Option to disable hopper removal at untrust
+    # Remove hoppers of players that get untrusted?
+    untrust-remove: true

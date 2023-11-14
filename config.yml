@@ -180,11 +180,13 @@ protection:
 
 # 3rd party plugin integrations
 integration:
-  # Lands (https://www.spigotmc.org/resources/53313)
+  # Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, IridiumSkyblock, BentoBox
   lands:
     # Should players be allowed to place hoppers only in claimed areas?
     # This disallows placing upgradeable hoppers in wilderness.
     only-land: false
+    # Remove hoppers of players that get untrusted?
+    untrust-remove: true
 
   # Preventing linking containers in region where the player isn't trusted?
   # NOTE: This setting requires server reload / restart.
