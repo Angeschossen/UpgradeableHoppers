@@ -1,3 +1,1 @@
-+ Added: Option to disable hopper removal at untrust
-    # Remove hoppers of players that get untrusted?
-    untrust-remove: true
+- Fixed: [#2407] hopper item pickup
