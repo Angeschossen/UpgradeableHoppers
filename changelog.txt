@@ -1,1 +1,8 @@
-- Fixed: [#2407] hopper item pickup
++ Added: You can now set names for hoppers
+You might want to change the list item for the /hopper list menu:
+        entry_object:
+          lore: '&8✖ &7Open the hoppers menu.[newline][newline]&8✖ &9RIGHT CLICK[newline]   &7Teleport
+            to the hopper[newline]   &7for&c {cost}&7.[newline]&8✖ &3DROP[newline]   &7Delete
+            this hopper.[newline]    &8• &cThe item can''t be given[newline]      &cback
+            to you, if the area[newline]      &cisn''t loaded.'
+          name: '{name}'
