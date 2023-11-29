@@ -1,8 +1,8 @@
-+ Added: You can now set names for hoppers
-You might want to change the list item for the /hopper list menu:
-        entry_object:
-          lore: '&8✖ &7Open the hoppers menu.[newline][newline]&8✖ &9RIGHT CLICK[newline]   &7Teleport
-            to the hopper[newline]   &7for&c {cost}&7.[newline]&8✖ &3DROP[newline]   &7Delete
-            this hopper.[newline]    &8• &cThe item can''t be given[newline]      &cback
-            to you, if the area[newline]      &cisn''t loaded.'
-          name: '{name}'
++ Added: [Suggestion] Visualization for suction radius
+Make sure to update the suction item in the GUI language file accordingly:
+        upgrade_suction_radius:
+          lore: '&8✖ &7Upgrade the suction radius.[newline]   &7The hopper sucks all
+            items that[newline]   &7are in this radius.[newline][newline]   &8• &7Current:
+            {value}[newline]   &8• &7Next:&a {value_next}[newline]     &7Cost:&c
+            {cost}[newline][newline]&8✖ &9RIGHT CLICK[newline]   &7Toggle suction: {suction_status}[newline]&8✖ &9SHIFT + RIGHT CLICK[newline]   &7Visualize suction radius.'
+          name: '&6&lSuction Radius'
