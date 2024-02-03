@@ -1,1 +1,1 @@
-- Fixed: Missing command: /hopper confirmtp
+- Fixed: [#2508] default lang option
