@@ -54,5 +54,13 @@ permissions:
                 description: Bypass vanilla hopper craft setting.
               uhoppers.bypass.vanilla.place:
                 description: Bypass vanilla hopper place setting.
+
       uhoppers.upgrade:
         description: Only allow players with this permission to upgrade any hopper, if config option upgrade-perm enabled.
+
+      uhoppers.teleport.*:
+        description: Allow all teleportation.
+        children:
+          uhoppers.teleport.hopper:
+            description: Allow teleportation to hoppers.
+            default: true

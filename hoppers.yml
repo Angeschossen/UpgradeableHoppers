@@ -10,6 +10,8 @@ hoppers:
   normal:
     # Available types: NORMAL and CHUNK
     type: 'NORMAL'
+    # Is default type? Used if no hopper type is provided at /hopper get.
+    default: true
     name: '&9&lUpgradeable Hopper'
     cost: 1500.0
     # Set the hopper transfer and suction tick time (20 ticks are one second)

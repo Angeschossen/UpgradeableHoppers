@@ -1,1 +1,3 @@
-- Fixed: [#2508] default lang option
++ Added: default option to hoppers.yml:
+    # Is default type? Used if no hopper type is provided at /hopper get.
+    default: true
