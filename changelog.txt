@@ -1,3 +1,1 @@
-+ Added: default option to hoppers.yml:
-    # Is default type? Used if no hopper type is provided at /hopper get.
-    default: true
++ Changed: Prioritize smeltables over fuel. Related to smeltables config option

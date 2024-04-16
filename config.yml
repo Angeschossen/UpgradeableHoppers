@@ -6,6 +6,32 @@ general:
   # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
   # To access translations, other than en-US, execute /translations in the Discord server.
   language: 'en-US'
+
+  # Date format
+  # MM: Month
+  # dd: Day of month
+  # yyyy: Year
+  # hh: hours
+  # mm: minutes
+  # ss: seconds
+  # NOTE: These settings require server reload / restart.
+  date-format:
+    # Set the time zone for date text outputs.
+    # Example: America/Los_Angeles or GMT-8:00
+    # List of time zones: https://timezonedb.com/time-zones
+    # If empty, it uses the time zone of the machine your server is running on.
+    time-zone: ''
+    # General format for invites etc.
+    # Examples:
+    #   American 12-hour format (a = 12 hour format): MM/dd/yyyy hh:mm a
+    #   German 24-hour format: dd.MM.yyyy hh:mm
+    general: 'MM/dd/yyyy hh:mm a'
+    # Format used when only a time displayed.
+    # Examples:
+    #   American 12-hour format (a = 12 hour format): hh:mm a
+    #   German 24-hour format: hh:mm
+    time_2: 'hh:mm a'
+
   # Worlds where upgradeable hoppers should be able to be placed.
   worlds_list:
     - 'world'
