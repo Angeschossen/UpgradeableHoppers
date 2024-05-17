@@ -1,1 +1,2 @@
-+ Changed: Prioritize smeltables over fuel. Related to smeltables config option
+- Fixed: Hopper recipe on 1.20.5-6
+- Fixed: Chat input with some chat plugins
