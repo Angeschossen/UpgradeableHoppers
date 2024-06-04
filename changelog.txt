@@ -1,2 +1,2 @@
-- Fixed: Hopper recipe on 1.20.5-6
-- Fixed: Chat input with some chat plugins
+- Fixed: not removing hoppers upon lands leave via /lands leave
+- Fixed: error when deleting claims on region deletion
