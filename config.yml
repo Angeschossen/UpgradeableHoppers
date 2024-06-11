@@ -138,7 +138,7 @@ optimization:
       # This will help increasing performance, but may make it impossible to display the storage capacity using redstone lamps.
       precise: false
 
-  # Should the transfer amount from levels.yml also be applied to pulling items from containers above the hopper?
+  # Should the transfer amount from hoppers.yml also be applied to pulling items from containers above the hopper?
   item-pull-amount: true
 
   # Should an item and link combination be put on cooldown, if the item can't be added to the specific link?

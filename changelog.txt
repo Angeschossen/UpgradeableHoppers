@@ -1,2 +1,1 @@
-- Fixed: not removing hoppers upon lands leave via /lands leave
-- Fixed: error when deleting claims on region deletion
+- Fixed: Missing message for chat input
