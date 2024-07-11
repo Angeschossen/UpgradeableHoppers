@@ -1,1 +1,1 @@
-- Fixed: Missing message for chat input
+- Fixed: Displaying of items in GUI menu with strict filtering enabled

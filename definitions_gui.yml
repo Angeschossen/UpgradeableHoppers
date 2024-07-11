@@ -74,7 +74,7 @@ gui:
         whitelist:
           material: 'HOPPER'
           slots: 40
-        strict:
+        refresh_strict:
           material: 'OAK_DOOR'
           slots: 41
         refresh_copy_paste:
