@@ -177,8 +177,9 @@ link:
 
   type:
     furnace:
-      # Define a list of additional blocks that can be smelt in a furnace.
-      # For example blocks from data-packs.
+      # Define a list of additional blocks that can be smelt in a furnace. For example blocks from data-packs.
+      # You either need to add material values or model-data number values.
+      # Material values can be found here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
       smelt_list: []
 
 # Sound configuration
