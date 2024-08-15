@@ -14,6 +14,25 @@ permissions:
   uhoppers.*:
     description: Access to all UpgradeableHoppers actions
     children:
+      uhoppers.admin.*:
+        description: Access to all admin actions.
+        children:
+          uhoppers.admin.command.*:
+            description: Access to all admin commands.
+            children:
+              uhoppers.admin.command.give:
+                description: Access to /uhoppers admin give
+              uhoppers.admin.command.about:
+                description: Access to /uhoppers admin about
+              uhoppers.admin.command.import:
+                description: Access to /uhoppers admin import
+              uhoppers.admin.command.listperms:
+                description: Access to /uhoppers admin listperms
+              uhoppers.admin.command.migratedb:
+                description: Access to /uhoppers admin migratedb
+              uhoppers.admin.command.reload:
+                description: Access to /uhoppers admin reload
+
       uhoppers.hoppers.<number>:
         description: Give players permission to create specific amount of hoppers.
       uhoppers.links.<number>:
@@ -24,16 +43,16 @@ permissions:
         description: Access to all commands.
         children:
           uhoppers.command.get:
-            description: Access to /UpgradeableHoppers get command
-          uhoppers.command.give:
-            description: Access to /UpgradeableHoppers give command
+            description: Access to /upgradeablehoppers get
           uhoppers.command.help:
-            description: Access to /UpgradeableHoppers help command
-      uhoppers.admin.command.*:
-        description: Access to all admin commands.
-        children:
-          uhoppers.admin.command.reload:
-            description: Access to /UpgradeableHoppers reload command
+            description: Access to /upgradeablehoppers help
+          uhoppers.command.view:
+            description: Access to /upgradeablehoppers view
+          uhoppers.command.list:
+            description: Access to /upgradeablehoppers list
+          uhoppers.command.abort:
+            description: Access to /upgradeablehoppers abort
+
       uhoppers.bypass.*:
         description: Bypass protections etc.
         children:
