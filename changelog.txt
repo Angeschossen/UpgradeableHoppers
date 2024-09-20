@@ -1,2 +1,1 @@
-+ Added: /hoppers view
-Visualizes nearby hoppers and links. Also, lets you disable visualizations.
+- Fixed: Item transfer to vanilla hoppers

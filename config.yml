@@ -104,6 +104,7 @@ hopper:
     # Allow the crafting of normal hoppers?
     crafting: true
     # Allow the placing of normal hoppers?
+    # This can be bypassed with this permission: uhoppers.bypass.vanilla.place
     placing: true
     # Should normal hoppers (not from this plugin) be converted on placement?
     convert: false

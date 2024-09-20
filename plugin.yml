@@ -5,6 +5,11 @@ author: Angeschossen
 api-version: 1.13
 softdepend: [ShopGUIPlus, Lands, Vault, SuperiorSkyblock2, BentoBox, WildStacker, WildChests, RoseStacker, AdvancedChests, PlotSquared, WorldGuard]
 
+libraries:
+  - "org.apache.commons:commons-lang3:3.17.0"
+  - "com.zaxxer:HikariCP:4.0.3"
+  - "org.slf4j:slf4j-jdk14:1.7.32"
+  - "org.slf4j:slf4j-api:1.7.32"
 
 commands:
   upgradeablehoppers:
