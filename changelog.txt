@@ -1,1 +1,1 @@
-- Fixed: SkinsRestorer integration
+- Fixed: Prevent hoppers getting crafted if crafting disabled (auto crafters)
