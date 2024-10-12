@@ -1,1 +1,1 @@
-- Removed: logging
++ Added: [Suggestion] Expand suction visualization to all y levels
